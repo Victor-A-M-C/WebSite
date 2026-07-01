@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Victor A.M.C.</title>
+
+<style>
+
+body {
+
+background-color: #DEDED2;
+
+margin: 0;
+
+font-family: Arial, sans-serif;
+
+}
+
+
+
+.split {
+
+display: flex;
+
+height: 50vh;
+
+padding: 0 150px;
+
+}
+
+
+
+.text-side,
+
+.image-side {
+
+flex: 1;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+}
+
+
+
+.text-side {
+
+flex-direction: column;
+
+text-align: center;
+
+}
+
+
+
+/* Container for the image and its label */
+
+.image-container {
+
+position: relative;
+
+display: inline-block;
+
+width: 80%; /* Sets the flexible base width */
+
+max-width: 440px; /* Prevents the image from growing too large on massive screens */
+
+margin-top: 240px;
+
+}
+
+
+
+/* Responsive scaling rule to preserve original dimension ratios */
+
+.image-side img {
+
+width: 100%; /* Spans full width of the wrapper container */
+
+height: auto; /* Automatically scales the height to prevent structural warping */
+
+display: block;
+
+}
+
+
+
+/* Label positioned strictly above the image, aligned to its right edge */
+
+.top-right-label {
+
+position: absolute;
+
+top: -30px; /* Sits cleanly outside above the top boundary */
+
+right: 0; /* Aligns perfectly with the right edge of the image */
+
+font-size: 16px;
+
+font-weight: normal;
+
+color: #000000;
+
+white-space: nowrap;
+
+}
+
+
+
+.text-side h1 {
+
+font-size: 24px;
+
+}
+
+
+
+.text-side p {
+
+font-size: 18px;
+
+margin: 2px 0;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="split">
+
+<div class="text-side">
+
+<h1>Victor Anton Munteanu Ciurușniuc</h1>
+
+<p>contact.victoramc@gmail.com</p>
+
+<br>
+
+<p>About</p>
+
+<p>Art</p>
+
+<p>Essays</p>
+
+<p>Poems</p>
+
+<p></p>
+
+<p></p>
+
+</div>
+
+
+
+<div class="image-side">
+
+<div class="image-container">
+
+<div class="top-right-label">Română</div>
+
+<img src="poza2.jpg" alt="Example">
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+
+</html>
