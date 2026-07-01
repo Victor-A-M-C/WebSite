@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor A.M.C</title>
+    <style>
+        /* Reset margins and paddings to prevent gaps */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            overflow-y: auto; /* Moves the scrollbar to the far right of the screen */
+        }
+
+        /* Use CSS Grid to perfectly slice the screen into 20% / 60% / 20% */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            min-height: 100vh; /* Keeps columns full height even if content is short */
+        }
+
+        /* Left and Right columns */
+        .side-column {
+            background-color: #E65137;
+        }
+
+        /* Center column with borders */
+        .center-column {
+            background-color: #DEDED2;
+            padding: 20px;
+            padding-bottom: 3em; /* Adds exactly 2 rows of empty space at the very bottom of the text */
+            position: relative;  /* Allows absolute positioning relative to this column */
+            
+            /* Borders between the sections */
+            border-left: 4px solid #E65137;
+            border-right: 4px solid #E65137;
+        }
+
+        /* Styling the main header to stay centered and pushed down */
+        .center-column h1 {
+            text-align: center;
+            margin-top: 1em; 
+            margin-bottom: 2.5em; /* Adjusted to maintain the same gap before text starts */
+        }
+
+        /* Positioned at the top left of the middle column, styled black and matches standard text size */
+        .top-left-label {
+            position: absolute;
+            top: 1em;
+            left: 1.5em;
+            font-size: 1em;         /* Matches the body text size exactly */
+            font-weight: normal;
+            color: #000000;         /* Solid black text */
+        }
+
+        /* Targets the 'Home' link inside the top-left label specifically */
+        .top-left-label a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        /* Positioned at the top right of the middle column, styled black and matches standard text size */
+        .top-right-label {
+            position: absolute;
+            top: 1em;
+            right: 1.5em;
+            font-size: 1em;         /* Matches the body text size exactly */
+            font-weight: normal;
+            color: #000000;         /* Solid black text */
+        }
+
+        /* Centering the paragraph container while keeping text left-aligned */
+        .center-column p {
+            text-align: left;       /* Each line starts neatly on the left */
+            width: 85%;             /* Sets a clean, responsive width inside the column */
+            max-width: 650px;       /* Keeps line lengths ideal for reading comfort */
+            margin: 0 auto 1em auto; /* 'auto' on left/right forces equal distance from the borders */
+            line-height: 1.6;       
+        }
+
+        /* Container to center the image and control its flexible width (Scaled up by 2x) */
+        .image-container {
+            width: 42.5%;           /* Exactly 2x of the previous 21.25% width */
+            max-width: 325px;       /* Exactly 2x of the previous 162.5px max-width */
+            margin: 2em auto 0 auto; /* Keeps the container perfectly centered */
+            display: block;
+        }
+
+        /* Responsive scaling rule to preserve original dimension ratios */
+        .image-container img {
+            width: 100%;            /* Spans full width of its wrapper container */
+            height: auto;           /* Automatically scales height to prevent distortion */
+            display: block;
+        }
+
+        /* Centered formulas matching regular text style exactly */
+        .formula {
+            text-align: center;
+            font-weight: normal; 
+            font-size: 1em;       
+            margin: 1.5em 0;     
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="side-column"></div>
+        
+        <div class="center-column">
+            <!-- Top labels for the middle column - Added a clean link to home -->
+            <div class="top-left-label"><a href="index.html">Home</a></div>
+            <div class="top-right-label">Română</div>
+
+            <h1>About</h1>
+            
+            <p>Victor Anton Munteanu Ciurușniuc is a Romanian poet and artist who has dedicated his life to the pursuit of love, knowledge, and beauty. Raised in a tight knit Romanian community, he has spent years teaching and disseminating Romanian culture. Drawing inspiration from his love of his wife and country, he continues to create thoughtful work in multiple mediums.</p>
+
+            <!-- Centered responsive image container -->
+            <div class="image-container">
+                <img src="poza.jpg" alt="Victor Anton Munteanu Ciurușniuc">
+            </div>
+
+        </div>
+        
+        <div class="side-column"></div>
+    </div>
+
+</body>
+</html>
