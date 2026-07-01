@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor A.M.C.</title>
+    <title>Victor A.M.C. - Poezii</title>
     <style>
         * {
             box-sizing: border-box;
@@ -56,6 +56,11 @@
             font-size: 16px;
             font-weight: normal;
             color: #000000;
+        }
+
+        /* Targets the 'Acasă' link specifically to make it black and remove underline */
+        .top-left-label a {
+            color: #000000;
             text-decoration: none;
         }
 
@@ -67,11 +72,12 @@
             font-size: 16px;
             font-weight: normal;
             color: #000000;
-            text-decoration: none;
         }
 
-        .top-left-label:hover, .top-right-label:hover {
-            text-decoration: underline;
+        /* Targets the 'English' language toggle link to keep it clean, black, and non-underlined */
+        .top-right-label a {
+            color: #000000;
+            text-decoration: none;
         }
 
         /* "Poems" title spacing - Updated margin-bottom to 60px (adds another extra row of spacing) */
@@ -143,11 +149,11 @@
         <div class="side"></div>
 
         <div class="middle">
-            <!-- Top navigational metadata labels turned into functioning links -->
-            <a href="index.html" class="top-left-label">Home</a>
-            <a href="poems.html" class="top-right-label">Română</a>
+            <!-- Top navigational cross-language links -->
+            <div class="top-left-label"><a href="/ro/">Acasă</a></div>
+            <div class="top-right-label"><a href="/poems">English</a></div>
 
-            <div class="title">Poems</div>
+            <div class="title">Poezii</div>
             
             <div class="content-area">
                 <div class="text-column">
@@ -155,35 +161,35 @@
                     <a href="#salcia" class="block">Salcia 26-5-2026</a>
                     <a href="#leusteanul" class="block">Leușteanul Meu 3-6-2026</a>
                     <a href="#fuga" class="block">Fugă 11-6-2026</a>
-                    <a href="#clipit" class="block">Eu Am Clipit 15-6-2026</a>
+                    <a href="#clipit" class="block">Eu am Clipit 15-6-2026</a>
                     <a href="#mortul" class="block">Mortul 17-6-2026</a>
-                    <a href="#left7" class="block">Left Block 7</a>
-                    <a href="#left8" class="block">Left Block 8</a>
-                    <a href="#left9" class="block">Left Block 9</a>
+                    <a href="#left7" class="block">Peștera cu Minuni 29-6-2026</a>
+                    <a href="#left8" class="block"></a>
+                    <a href="#left9" class="block"></a>
                 </div>
 
                 <div class="text-column">
                     <a href="#pisicuta" class="block">Pisicuța 28-4-2026</a>
                     <a href="#visul" class="block">Visul Pisicuței 26-5-2026</a>
-                    <a href="#vremea" class="block">Când Vremea-mi Va Veni 5-6-2026</a>
+                    <a href="#vremea" class="block">Când Vremea-mi va Veni 5-6-2026</a>
                     <a href="#romania" class="block">România 11-6-2026</a>
                     <a href="#focul" class="block">Focul 16-6-2026</a>
                     <a href="#multumesc" class="block">Mulțumesc Pentru… 22-6-2026</a>
-                    <a href="#center7" class="block">Center Block 7</a>
-                    <a href="#center8" class="block">Center Block 8</a>
-                    <a href="#center9" class="block">Center Block 9</a>
+                    <a href="#center7" class="block"></a>
+                    <a href="#center8" class="block"></a>
+                    <a href="#center9" class="block"></a>
                 </div>
 
                 <div class="text-column">
-                    <a href="#duduie" class="block">Draga Mea Duduie 20-5-2026</a>
+                    <a href="#duduie" class="block">Draga mea Duduie 20-5-2026</a>
                     <a href="#floarea" class="block">Floarea Sărată 26-5-2026</a>
                     <a href="#mamico" class="block">Mămico 11-6-2026</a>
                     <a href="#lipsa" class="block">Îți Simt Lipsa 14-6-2026</a>
                     <a href="#ploaia" class="block">Ploaia 17-6-2026</a>
                     <a href="#inamorat" class="block">De Tine-namorat 24-6-2026</a>
-                    <a href="#right7" class="block">Right Block 7</a>
-                    <a href="#right8" class="block">Right Block 8</a>
-                    <a href="#right9" class="block">Right Block 9</a>
+                    <a href="#right7" class="block"></a>
+                    <a href="#right8" class="block"></a>
+                    <a href="#right9" class="block"></a>
                 </div>
             </div>
 
@@ -211,7 +217,7 @@
                 <div>Și a adormit.</div>
             </div>
 
-            <div id="duduie" class="section-header">Draga Mea Duduie 20-5-2026</div>
+            <div id="duduie" class="section-header">Draga mea Duduie 20-5-2026</div>
             <div class="section-text">
                 <div>Draga mea duduie</div>
                 <div>M-afectează lipsa ta,</div>
@@ -241,7 +247,7 @@
             <div id="visul" class="section-header">Visul Pisicuței 26-5-2026</div>
             <div class="section-text">
                 <div>Într-un bunget o pisică</div>
-                <div>With blană gri, ca o lună mică,</div>
+                <div>Cu blană gri, ca o lună mică,</div>
                 <div>A ieșit cu aer clandestin,</div>
                 <div>Frunze pe pielea-i de satin.</div>
                 <div>S-a scuturat cu eleganță,</div>
@@ -260,7 +266,7 @@
                 <div>Urmând o aromă deosebită,</div>
                 <div>Care a dus-o într-o pădure,</div>
                 <div>Unde a văzut un fluture.</div>
-                <div>Și după el a herat,</div>
+                <div>Și după el a alergat,</div>
                 <div>Până când a aflat,</div>
                 <div>Unde anterior a stat.</div>
                 <div>Pisicuța s-a mirat,</div>
@@ -309,7 +315,7 @@
                 <div>Prietenul meu verduros.</div>
             </div>
 
-            <div id="vremea" class="section-header">Când Vremea-mi Va Veni 5-6-2026</div>
+            <div id="vremea" class="section-header">Când Vremea-mi va Veni 5-6-2026</div>
             <div class="section-text">
                 <div>Iubita mea drăguță, când vremea-mi va veni să mor,</div>
                 <div>Să știi că tu mi-ai dat o viață bună, plină de dragoste și dor.</div>
@@ -326,7 +332,7 @@
 
             <div id="mamico" class="section-header">Mămico 11-6-2026</div>
             <div class="section-text">
-                <div>Glasul tău mă cheam-adesea, te aud în valuri și-n vânt, și-n ploaia căzând din nori.</div>
+                <div>Glasul tău mă cheam-adesea, te aud în valuri, și-n vânt și-n ploaia căzând din nori.</div>
                 <div>Natura plânge și suspină, și îngerii-s înțelegători.</div>
                 <div>Ca o lumină fără ceară ai încercat să arzi dar tu te-ai stins.</div>
                 <div>Cum te-am lăsat să pleci, mămico… acuma-mi vii doar într-un vis,</div>
@@ -343,7 +349,7 @@
 
             <div id="romania" class="section-header">România 11-6-2026</div>
             <div class="section-text">
-                <div>Romantic sună discuția când ascult oameni vorbind,</div>
+                <div>Romantic sună discuția când ascult oamenii vorbind,</div>
                 <div>Mâncarea e gustoasă, aroma-i vântul împodobind,</div>
                 <div>Nicăieri în lume nu există țară ca aici,</div>
                 <div>Apreciază poporul acesta plin de prieteni și amici.</div>
@@ -356,16 +362,16 @@
                 <div>Viața mi-au furat.</div>
             </div>
 
-            <div id="clipit" class="section-header">Eu Am Clipit 15-6-2026</div>
+            <div id="clipit" class="section-header">Eu am Clipit 15-6-2026</div>
             <div class="section-text">
                 <div>Pe o banc-afară eu am clipit,</div>
                 <div>Și-n secunda aceea la ce am privit?</div>
                 <div>Pleoapele ochilor mei închise,</div>
-                <div>But și razele galbene de soare emise.</div>
+                <div>Dar și razele galbene de soare emise.</div>
                 <div>Poate aria naturii era mai bine transmisă,</div>
                 <div>Părea că ascultam prima dată c-o ureche deschisă:</div>
                 <div>Freamătul frunzei, ramuri șoptind,</div>
-                <div>Și iarba dancing, și roua stropind,</div>
+                <div>Și iarba dansând, și roua stropind,</div>
                 <div>Păsări suflând o veselă melodie.</div>
                 <div>Parcă toată natura cânta-n armonie.</div>
             </div>
@@ -400,10 +406,15 @@
             <div id="multumesc" class="section-header">Mulțumesc Pentru… 22-6-2026</div>
             <div class="section-text">
                 <div>Mulțumesc pentru fiecare dată când m-ai ajutat,</div>
+                <br>
                 <div>Mulțumesc pentru toată vremea cât mai așteptat,</div>
+                <br>
                 <div>Mulțumesc pentru viața asta pe care mi-ai dat,</div>
+                <br>
                 <div>Mulțumesc pentru răbdarea ta când eu mă zbat,</div>
+                <br>
                 <div>Mulțumesc pentru că nu m-ai abandonat,</div>
+                <br>
                 <div>Și îți cer scuze pentru vremea în care eu te-am uitat.</div>
             </div>
 
@@ -419,58 +430,74 @@
                 <div>Și adorm cu vise tandre și de tine-namorat.</div>
             </div>
 
-            <div id="left7" class="section-header">Left Block 7</div>
+            <div id="left7" class="section-header">Peștera cu Minuni 29-6-2026</div>
             <div class="section-text">
-                <div>Text 19 Line 1</div>
-                <div>Text 19 Line 2</div>
+                <div>Dintr-o mină de sare eu am ajuns</div>
+                <div>Într-un tunel nevăzut dup-un colț ascuns,</div>
+                <div>Să privesc frumusețea ei în singurătate,</div>
+                <div>Nederanjat de oameni, nici de târnăcoape or aparate.</div>
+                <div>În perete vine de argint străluceau,</div>
+                <div>Și pe alături de ele  rodocrozite dansau.</div>
+                <div>M-au condus până la o peșteră deschisă,</div>
+                <div>Și privind splendoarea ei am intrat într-o criză,</div>
+                <div>Că nici topaze, ametiste, sau diamante clare,</div>
+                <div>Nu-mi distrag atenția de la mineralele în care chipul ei apare,</div>
+                <div>Cărbune ca ochii ei uimitori,</div>
+                <div>Rubine ca obrajii ei uluitori,</div>
+                <div>Și safire ca părul ei văd scânteind,</div>
+                <div>Opalul ca o stea cu sufletul ei lucind.</div>
+                <div>Poate luceafărul n-a mai răsărit,</div>
+                <div>Poate a intrat în pământul împodobit</div>
+                <div>De pietre prețioase, să mă scoată din fire,</div>
+                <div>Și de iubita mea dragă să-mi dea amintire.</div>
             </div>
 
-            <div id="center7" class="section-header">Center Block 7</div>
+            <div id="center7" class="section-header"></div>
             <div class="section-text">
-                <div>Text 20 Line 1</div>
-                <div>Text 20 Line 2</div>
+                <div></div>
+                <div></div>
             </div>
 
-            <div id="right7" class="section-header">Right Block 7</div>
+            <div id="right7" class="section-header"></div>
             <div class="section-text">
-                <div>Text 21 Line 1</div>
-                <div>Text 21 Line 2</div>
+                <div></div>
+                <div></div>
             </div>
 
-            <div id="left8" class="section-header">Left Block 8</div>
+            <div id="left8" class="section-header"></div>
             <div class="section-text">
-                <div>Text 22 Line 1</div>
-                <div>Text 22 Line 2</div>
+                <div></div>
+                <div></div>
             </div>
 
-            <div id="center8" class="section-header">Center Block 8</div>
+            <div id="center8" class="section-header"></div>
             <div class="section-text">
-                <div>Text 23 Line 1</div>
-                <div>Text 23 Line 2</div>
+                <div></div>
+                <div></div>
             </div>
 
-            <div id="right8" class="section-header">Right Block 8</div>
+            <div id="right8" class="section-header"></div>
             <div class="section-text">
-                <div>Text 24 Line 1</div>
-                <div>Text 24 Line 2</div>
+                <div></div>
+                <div></div>
             </div>
 
-            <div id="left9" class="section-header">Left Block 9</div>
+            <div id="left9" class="section-header"></div>
             <div class="section-text">
-                <div>Text 25 Line 1</div>
-                <div>Text 25 Line 2</div>
+                <div></div>
+                <div></div>
             </div>
 
-            <div id="center9" class="section-header">Center Block 9</div>
+            <div id="center9" class="section-header"></div>
             <div class="section-text">
-                <div>Text 26 Line 1</div>
-                <div>Text 26 Line 2</div>
+                <div></div>
+                <div></div>
             </div>
 
-            <div id="right9" class="section-header">Right Block 9</div>
+            <div id="right9" class="section-header"></div>
             <div class="section-text">
-                <div>Text 27 Line 1</div>
-                <div>Text 27 Line 2</div>
+                <div></div>
+                <div></div>
             </div>
 
         </div>
