@@ -55,6 +55,12 @@ color: #000000;
 white-space: nowrap;
 }
 
+/* Keeps the English language toggle completely clean, black, and non-underlined */
+.top-right-label a {
+color: #000000;
+text-decoration: none;
+}
+
 .text-side h1 {
 font-size: 24px;
 }
@@ -71,10 +77,11 @@ font-size: 18px; /* Keeps it matching the size of your other menu items */
 margin: 2px 0;
 }
 
-.poems-link {
+/* Styled to match the standard plain text menu elements perfectly */
+.poezii-link {
 color: #000000;
 text-decoration: none;
-font-size: 18px; /* Keeps it matching the size of your other menu items */
+font-size: 18px;
 margin: 2px 0;
 }
 </style>
@@ -95,8 +102,9 @@ margin: 2px 0;
 
 <div class="image-side">
 <div class="image-container">
-<div class="top-right-label">Română</div>
-<img src="poza2.jpg" alt="Example">
+<!-- Added the link to route users back up to the English index root -->
+<div class="top-right-label"><a href="/">English</a></div>
+<img src="../poza2.jpg" alt="Example">
 </div>
 </div>
 </section>
