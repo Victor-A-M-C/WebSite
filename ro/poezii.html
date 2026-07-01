@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor A.M.C.</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            /* Enables smooth transition when teleporting down the page */
+            scroll-behavior: smooth;
+        }
+
+        body, html {
+            min-height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #DEDED2;
+        }
+
+        /* 3-Column Layout: 20% | 60% | 20% extending full page height */
+        .container {
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            min-height: 100vh;
+            width: 100vw;
+        }
+
+        /* Side Columns */
+        .side {
+            background-color: #A7B670;
+        }
+
+        /* Middle Column with Borders - Converted to Flexbox for pristine spacing */
+        .middle {
+            background-color: #DEDED2;
+            border-left: 5px solid #A7B670;
+            border-right: 5px solid #A7B670;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-bottom: 80px;
+            position: relative; /* Allows absolute positioning for the top labels */
+        }
+
+        /* Top-left aligned label matching standard body text style */
+        .top-left-label {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 16px;
+            font-weight: normal;
+            color: #000000;
+        }
+
+        /* Targets the 'Home' link specifically to make it black and remove underline */
+        .top-left-label a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        /* Top-right aligned label matching standard body text style */
+        .top-right-label {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 16px;
+            font-weight: normal;
+            color: #000000;
+        }
+
+        /* "Poems" title spacing - Updated margin-bottom to 60px (adds another extra row of spacing) */
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 60px; 
+            margin-bottom: 60px;
+        }
+
+        /* Grid wrapper for the columns at the top */
+        .content-area {
+            display: flex;
+            justify-content: space-around; 
+            padding: 0 20px;
+            height: 560px; 
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        /* Vertical column styling */
+        .text-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+            height: 100%;
+        }
+
+        /* Individual Block Styling turned into clean clickable links */
+        .block {
+            font-size: 16px;
+            color: #333;
+            font-weight: normal;
+            text-decoration: none; /* Removes default underline */
+            cursor: pointer;
+        }
+
+        .block:hover {
+            text-decoration: underline; /* Subtle feedback when hovering */
+        }
+
+        /* Spacing layout for the poem headers */
+        .section-header {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 60px; /* Space between the prior poem block and this header */
+            
+            /* Forces the browser to leave 20% of the viewport height above the text when teleported to */
+            scroll-margin-top: 20vh; 
+        }
+
+        /* Spacing layout for poem text - forces a precise 2-row gap (40px) under every header */
+        .section-text {
+            font-size: 16px;
+            color: #333;
+            font-weight: normal;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px; /* EQUIDISTANT 2-ROW GAP */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="side"></div>
+
+        <div class="middle">
+            <!-- Top navigational metadata labels -->
+            <div class="top-left-label"><a href="/">Home</a></div>
+            <div class="top-right-label">English</div>
+
+            <div class="title">Poezii</div>
+            
+            <div class="content-area">
+                <div class="text-column">
+                    <a href="#tomita" class="block">Tomiță 24-4-2026</a>
+                    <a href="#salcia" class="block">Salcia 26-5-2026</a>
+                    <a href="#leusteanul" class="block">Leușteanul Meu 3-6-2026</a>
+                    <a href="#fuga" class="block">Fugă 11-6-2026</a>
+                    <a href="#clipit" class="block">Eu am Clipit 15-6-2026</a>
+                    <a href="#mortul" class="block">Mortul 17-6-2026</a>
+                    <a href="#left7" class="block">Peștera cu Minuni 29-6-2026</a>
+                    <a href="#left8" class="block"></a>
+                    <a href="#left9" class="block"></a>
+                </div>
+
+                <div class="text-column">
+                    <a href="#pisicuta" class="block">Pisicuța 28-4-2026</a>
+                    <a href="#visul" class="block">Visul Pisicuței 26-5-2026</a>
+                    <a href="#vremea" class="block">Când Vremea-mi va Veni 5-6-2026</a>
+                    <a href="#romania" class="block">România 11-6-2026</a>
+                    <a href="#focul" class="block">Focul 16-6-2026</a>
+                    <a href="#multumesc" class="block">Mulțumesc Pentru… 22-6-2026</a>
+                    <a href="#center7" class="block"></a>
+                    <a href="#center8" class="block"></a>
+                    <a href="#center9" class="block"></a>
+                </div>
+
+                <div class="text-column">
+                    <a href="#duduie" class="block">Draga mea Duduie 20-5-2026</a>
+                    <a href="#floarea" class="block">Floarea Sărată 26-5-2026</a>
+                    <a href="#mamico" class="block">Mămico 11-6-2026</a>
+                    <a href="#lipsa" class="block">Îți Simt Lipsa 14-6-2026</a>
+                    <a href="#ploaia" class="block">Ploaia 17-6-2026</a>
+                    <a href="#inamorat" class="block">De Tine-namorat 24-6-2026</a>
+                    <a href="#right7" class="block"></a>
+                    <a href="#right8" class="block"></a>
+                    <a href="#right9" class="block"></a>
+                </div>
+            </div>
+
+            <!-- Poem Sections with dynamic identical spacing -->
+
+            <div id="tomita" class="section-header">Tomiță 24-4-2026</div>
+            <div class="section-text">
+                <div>O pisicuță</div>
+                <div>Stă cu o bunicuță</div>
+                <div>Și toarce încet.</div>
+            </div>
+
+            <div id="pisicuta" class="section-header">Pisicuța 28-4-2026</div>
+            <div class="section-text">
+                <div>Un orologiu</div>
+                <div>Strică pacea de noapte.</div>
+                <div>Trează departe,</div>
+                <br>
+                <div>O pisicuță</div>
+                <div>Somnul ușor și-l abate.</div>
+                <div>Stânga și dreapta,</div>
+                <br>
+                <div>Nu vede nimic.</div>
+                <div>În tihnă s-a liniștit,</div>
+                <div>Și a adormit.</div>
+            </div>
+
+            <div id="duduie" class="section-header">Draga mea Duduie 20-5-2026</div>
+            <div class="section-text">
+                <div>Draga mea duduie</div>
+                <div>M-afectează lipsa ta,</div>
+                <div>Să nu-ți mai simt prezența</div>
+                <div>Îmi frânge inima.</div>
+                <br>
+                <div>Stilul tau cochet este armonie,</div>
+                <div>Vocea ta e caldă, ca o melodie.</div>
+                <div>Ochii tăi ca de cărbune</div>
+                <div>Mă opresc mereu pe loc.</div>
+                <div>Toată lumea-mi spune:</div>
+                <div>“Tu ai avut noroc.”</div>
+                <br>
+                <div>Abia aștept iubito</div>
+                <div>În brațe să te strâng,</div>
+                <div>Gândindu-mă la tine,</div>
+                <div>Parcă mi-ar veni să plâng.</div>
+            </div>
+
+            <div id="salcia" class="section-header">Salcia 26-5-2026</div>
+            <div class="section-text">
+                <div>Într-un bunget lin</div>
+                <div>O salcie atârnă</div>
+                <div>Lângă un lac blând.</div>
+            </div>
+
+            <div id="visul" class="section-header">Visul Pisicuței 26-5-2026</div>
+            <div class="section-text">
+                <div>Într-un bunget o pisică</div>
+                <div>Cu blană gri, ca o lună mică,</div>
+                <div>A ieșit cu aer clandestin,</div>
+                <div>Frunze pe pielea-i de satin.</div>
+                <div>S-a scuturat cu eleganță,</div>
+                <div>Împrăștiind foi cu aroganță.</div>
+                <div>Ajungând într-un pașnic sat,</div>
+                <div>Sub un mic tufiș și-a făcut un pat.</div>
+                <div>Mâța scumpă a căscat,</div>
+                <div>Și-n odihna ei astfel a visat:</div>
+                <div>Că a plecat în pribegie,</div>
+                <div>Fredonând o melodie.</div>
+                <div>În stânga ei era o mare,</div>
+                <div>Deasupra ei o lumânare.</div>
+                <div>O ceață deasă s-a lăsat,</div>
+                <div>Și pisicuț-a traversat</div>
+                <div>O plajă de nori acoperită,</div>
+                <div>Urmând o aromă deosebită,</div>
+                <div>Care a dus-o într-o pădure,</div>
+                <div>Unde a văzut un fluture.</div>
+                <div>Și după el a alergat,</div>
+                <div>Până când a aflat,</div>
+                <div>Unde anterior a stat.</div>
+                <div>Pisicuța s-a mirat,</div>
+                <div>“Ce ciudățenie am visat!”</div>
+            </div>
+
+            <div id="floarea" class="section-header">Floarea Sărată 26-5-2026</div>
+            <div class="section-text">
+                <div>Cum ar fi să fii o floare,</div>
+                <div>Într-un tei de lângă mare?</div>
+                <br>
+                <div>Să vezi stele răsărind,</div>
+                <div>În apă reflecția lor lucind.</div>
+                <br>
+                <div>Glasul apei să-ți cânte cu dor,</div>
+                <div>Un cântec vechi, liniștitor.</div>
+                <br>
+                <div>Un vânt să te legene-ncet,</div>
+                <div>Prin frunzele tale un sfânt sonet.</div>
+                <br>
+                <div>Briza purtând o aromă îmbinată,</div>
+                <div>Din parfumul tău și apă sărată.</div>
+                <br>
+                <div>Ce vreme pașnică ar fi,</div>
+                <div>Să fii floare-aceea pentr-o zi.</div>
+            </div>
+
+            <div id="leusteanul" class="section-header">Leușteanul Meu 3-6-2026</div>
+            <div class="section-text">
+                <div>Leușteanul meu din copilărie,</div>
+                <div>Mă uit la tine cu mândrie.</div>
+                <br>
+                <div>Uite cât ai mai crescut,</div>
+                <div>Verdeață ca tine n-am văzut.</div>
+                <br>
+                <div>Dintr-o boabă te-am sădit,</div>
+                <div>Și-acum doi copii ți-au răsărit!</div>
+                <br>
+                <div>În tinerețe te-am prețuit,</div>
+                <div>Și-n bărbăție te-am preamărit.</div>
+                <br>
+                <div>Ani te-am udat cu dărnicie,</div>
+                <div>Și mi-ai oferit frunze cu mărinimie.</div>
+                <br>
+                <div>Mulțumesc c-ai fost generos,</div>
+                <div>Prietenul meu verduros.</div>
+            </div>
+
+            <div id="vremea" class="section-header">Când Vremea-mi va Veni 5-6-2026</div>
+            <div class="section-text">
+                <div>Iubita mea drăguță, când vremea-mi va veni să mor,</div>
+                <div>Să știi că tu mi-ai dat o viață bună, plină de dragoste și dor.</div>
+                <br>
+                <div>Dacă într-o clipă, te simți că-ți vine să suspini,</div>
+                <div>Să simți bretonul tău pe frunte, ca un sărut, și să te-alini.</div>
+                <br>
+                <div>Dacă este-o altă viață, unde pot să te aștept,</div>
+                <div>Aș zăbovi în singurătate, pân-o să vii, ca să te strâng la piept.</div>
+                <br>
+                <div>Și-n lume-asta iubito, când vremea-ti va veni,</div>
+                <div>La mine-n mormânt să te-așeze, de-a pururea noi vom dormi.</div>
+            </div>
+
+            <div id="mamico" class="section-header">Mămico 11-6-2026</div>
+            <div class="section-text">
+                <div>Glasul tău mă cheam-adesea, te aud în valuri, și-n vânt și-n ploaia căzând din nori.</div>
+                <div>Natura plânge și suspină, și îngerii-s înțelegători.</div>
+                <div>Ca o lumină fără ceară ai încercat să arzi dar tu te-ai stins.</div>
+                <div>Cum te-am lăsat să pleci, mămico… acuma-mi vii doar într-un vis,</div>
+                <div>Că-n viața asta de coșmar eu te privesc doar în mormânt,</div>
+                <div>Și soare nu-ți mai bate-n pleoape, într-un sicriu pe sub pământ.</div>
+            </div>
+
+            <div id="fuga" class="section-header">Fugă 11-6-2026</div>
+            <div class="section-text">
+                <div>Un câine latră,</div>
+                <div>Pisica speriată</div>
+                <div>Aleargă zdravăn.</div>
+            </div>
+
+            <div id="romania" class="section-header">România 11-6-2026</div>
+            <div class="section-text">
+                <div>Romantic sună discuția când ascult oamenii vorbind,</div>
+                <div>Mâncarea e gustoasă, aroma-i vântul împodobind,</div>
+                <div>Nicăieri în lume nu există țară ca aici,</div>
+                <div>Apreciază poporul acesta plin de prieteni și amici.</div>
+            </div>
+
+            <div id="lipsa" class="section-header">Îți Simt Lipsa 14-6-2026</div>
+            <div class="section-text">
+                <div>Îngerii te-au luat,</div>
+                <div>Nu mai dorm fără tine-n pat,</div>
+                <div>Viața mi-au furat.</div>
+            </div>
+
+            <div id="clipit" class="section-header">Eu am Clipit 15-6-2026</div>
+            <div class="section-text">
+                <div>Pe o banc-afară eu am clipit,</div>
+                <div>Și-n secunda aceea la ce am privit?</div>
+                <div>Pleoapele ochilor mei închise,</div>
+                <div>Dar și razele galbene de soare emise.</div>
+                <div>Poate aria naturii era mai bine transmisă,</div>
+                <div>Părea că ascultam prima dată c-o ureche deschisă:</div>
+                <div>Freamătul frunzei, ramuri șoptind,</div>
+                <div>Și iarba dansând, și roua stropind,</div>
+                <div>Păsări suflând o veselă melodie.</div>
+                <div>Parcă toată natura cânta-n armonie.</div>
+            </div>
+
+            <div id="focul" class="section-header">Focul 16-6-2026</div>
+            <div class="section-text">
+                <div>Flacăra vioaie te hipnotizează,</div>
+                <div>Îți ațintește privirea când vezi cum dansează,</div>
+                <div>Ca un pește în apă se joacă și sare,</div>
+                <div>Se urcă, se înalță ca un val de mare,</div>
+                <div>Crește focul și-înghite tot ce e-n jur,</div>
+                <div>Până te cuprinde și te acoperă-ntr-un incendiu pur.</div>
+            </div>
+
+            <div id="ploaia" class="section-header">Ploaia 17-6-2026</div>
+            <div class="section-text">
+                <div>Dumnezeu plânge cu lacrimi potop,</div>
+                <div>În ploaia torențială fiecare-i atins de-un strop.</div>
+                <div>“De ce plângi tu Domnule? Ce s-a întâmplat?”</div>
+                <div>“Lumea-asta-i pierdută și plină de păcat.”</div>
+                <div>“Omul a pierdut scopul vieții de a fi iubitor.”</div>
+                <div>“Însă plâng ploaie sfântă, să îi spăl cu al meu dor.”</div>
+            </div>
+
+            <div id="mortul" class="section-header">Mortul 17-6-2026</div>
+            <div class="section-text">
+                <div>Păsări ciripesc,</div>
+                <div>Într-un mormânt se-ntâlnesc</div>
+                <div>Un mort și moartea.</div>
+            </div>
+
+            <div id="multumesc" class="section-header">Mulțumesc Pentru… 22-6-2026</div>
+            <div class="section-text">
+                <div>Mulțumesc pentru fiecare dată când m-ai ajutat,</div>
+                <br>
+                <div>Mulțumesc pentru toată vremea cât mai așteptat,</div>
+                <br>
+                <div>Mulțumesc pentru viața asta pe care mi-ai dat,</div>
+                <br>
+                <div>Mulțumesc pentru răbdarea ta când eu mă zbat,</div>
+                <br>
+                <div>Mulțumesc pentru că nu m-ai abandonat,</div>
+                <br>
+                <div>Și îți cer scuze pentru vremea în care eu te-am uitat.</div>
+            </div>
+
+            <div id="inamorat" class="section-header">De Tine-namorat 24-6-2026</div>
+            <div class="section-text">
+                <div>O vioară te anunță când intri tu în bloc,</div>
+                <div>Mă topesc din sloi de gheață când îți simt inima de foc.</div>
+                <div>Aerul e mult mai dulce, viața e mai plină,</div>
+                <div>Orologiul s-a oprit, suntem într-o stază lină.</div>
+                <div>Tu bați încet la ușă și imediat pornesc,</div>
+                <div>Te sărut și îți aud vocea ca un cântec românesc.</div>
+                <div>Jucăm o mică horă pân-ajungem noi în pat,</div>
+                <div>Și adorm cu vise tandre și de tine-namorat.</div>
+            </div>
+
+            <div id="left7" class="section-header">Peștera cu Minuni 29-6-2026</div>
+            <div class="section-text">
+                <div>Dintr-o mină de sare eu am ajuns</div>
+                <div>Într-un tunel nevăzut dup-un colț ascuns,</div>
+                <div>Să privesc frumusețea ei în singurătate,</div>
+                <div>Nederanjat de oameni, nici de târnăcoape or aparate.</div>
+                <div>În perete vine de argint străluceau,</div>
+                <div>Și pe alături de ele  rodocrozite dansau.</div>
+                <div>M-au condus până la o peșteră deschisă,</div>
+                <div>Și privind splendoarea ei am intrat într-o criză,</div>
+                <div>Că nici topaze, ametiste, sau diamante clare,</div>
+                <div>Nu-mi distrag atenția de la mineralele în care chipul ei apare,</div>
+                <div>Cărbune ca ochii ei uimitori,</div>
+                <div>Rubine ca obrajii ei uluitori,</div>
+                <div>Și safire ca părul ei văd scânteind,</div>
+                <div>Opalul ca o stea cu sufletul ei lucind.</div>
+                <div>Poate luceafărul n-a mai răsărit,</div>
+                <div>Poate a intrat în pământul împodobit</div>
+                <div>De pietre prețioase, să mă scoată din fire,</div>
+                <div>Și de iubita mea dragă să-mi dea amintire.</div>
+            </div>
+
+            <div id="center7" class="section-header"></div>
+            <div class="section-text">
+                <div></div>
+                <div></div>
+            </div>
+
+            <div id="right7" class="section-header"></div>
+            <div class="section-text">
+                <div></div>
+                <div></div>
+            </div>
+
+            <div id="left8" class="section-header"></div>
+            <div class="section-text">
+                <div></div>
+                <div></div>
+            </div>
+
+            <div id="center8" class="section-header"></div>
+            <div class="section-text">
+                <div></div>
+                <div></div>
+            </div>
+
+            <div id="right8" class="section-header"></div>
+            <div class="section-text">
+                <div></div>
+                <div></div>
+            </div>
+
+            <div id="left9" class="section-header"></div>
+            <div class="section-text">
+                <div></div>
+                <div></div>
+            </div>
+
+            <div id="center9" class="section-header"></div>
+            <div class="section-text">
+                <div></div>
+                <div></div>
+            </div>
+
+            <div id="right9" class="section-header"></div>
+            <div class="section-text">
+                <div></div>
+                <div></div>
+            </div>
+
+        </div>
+
+        <div class="side"></div>
+    </div>
+
+</body>
+</html>
