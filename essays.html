@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor A.M.C.</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            min-height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #DEDED2;
+        }
+
+        /* 3-Column Layout: 20% | 60% | 20% extending full page height */
+        .container {
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            min-height: 100vh;
+            width: 100vw;
+        }
+
+        /* Side Columns */
+        .side {
+            background-color: #86C0ED;
+        }
+
+        /* Middle Column with Borders - Converted to Flexbox for pristine spacing */
+        .middle {
+            background-color: #DEDED2;
+            border-left: 5px solid #86C0ED;
+            border-right: 5px solid #86C0ED;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-bottom: 80px;
+            position: relative; /* Allows absolute positioning for the top labels */
+        }
+
+        /* Top-left aligned label matching standard body text style */
+        .top-left-label {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 16px;
+            font-weight: normal;
+            color: #000000;
+        }
+
+        /* Top-right aligned label matching standard body text style */
+        .top-right-label {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 16px;
+            font-weight: normal;
+            color: #000000;
+        }
+
+        /* "Poems" title spacing - Updated margin-bottom to 60px (adds another extra row of spacing) */
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 60px; 
+            margin-bottom: 60px;
+        }
+
+        /* Grid wrapper for the columns at the top */
+        .content-area {
+            display: flex;
+            justify-content: space-around; 
+            padding: 0 20px;
+            height: 560px; 
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        /* Vertical column styling */
+        .text-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+            height: 100%;
+        }
+
+        /* Individual Block Styling */
+        .block {
+            font-size: 16px;
+            color: #333;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="side"></div>
+
+        <div class="middle">
+            <!-- Top navigational metadata labels -->
+            <div class="top-left-label"><a href="/">Home</a></div>
+            <div class="top-right-label"><a href="ro/eseuri.html">Română</a></div>
+
+            <div class="title">Essays</div>
+            
+            <div class="content-area">
+                <div class="text-column">
+                    <span class="block">An Essay on Essays 16-6-2026</span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                </div>
+
+                <div class="text-column">
+                    <span class="block">An Essay on AI 20-6-2026</span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                </div>
+
+                <div class="text-column">
+                    <span class="block">An Essay on the Equations of Morality 24-6-2026</span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="side"></div>
+    </div>
+
+</body>
+</html>
