@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor A.M.C</title>
+    <style>
+        /* Reset margins and paddings to prevent gaps */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            overflow-y: auto; /* Moves the scrollbar to the far right of the screen */
+        }
+
+        /* Use CSS Grid to perfectly slice the screen into 20% / 60% / 20% */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            min-height: 100vh; /* Keeps columns full height even if content is short */
+        }
+
+        /* Left and Right columns */
+        .side-column {
+            background-color: #86C0ED;
+        }
+
+        /* Center column with borders */
+        .center-column {
+            background-color: #DEDED2;
+            padding: 20px;
+            padding-bottom: 3em; /* Adds exactly 2 rows of empty space at the very bottom of the text */
+            position: relative;  /* Allows absolute positioning relative to this column */
+            
+            /* Borders between the sections */
+            border-left: 4px solid #86C0ED;
+            border-right: 4px solid #86C0ED;
+        }
+
+        /* Styling the main header to stay centered and pushed down */
+        .center-column h1 {
+            text-align: center;
+            margin-top: 1em; 
+            margin-bottom: 0.2em; /* Small gap between main header and small text */
+        }
+
+        /* Styling the small header text beneath the main title */
+        .center-column h2 {
+            text-align: center;
+            font-size: 0.9em;       /* Makes the text small */
+            font-weight: normal;    /* Removes heavy bolding */
+            color: #555555;         /* Gives it a subtle grey color */
+            margin-bottom: 0.2em;   /* Pulls the duplicated line tightly underneath */
+        }
+
+        /* Creates the structural empty row/gap after the final sub-header line */
+        .center-column h2.last-sub {
+            margin-bottom: 2.5em;
+        }
+
+        /* Positioned at the top left of the middle column, styled black and matches standard text size */
+        .top-left-label {
+            position: absolute;
+            top: 1em;
+            left: 1.5em;
+            font-size: 1em;         /* Set to 1em to match the body text size exactly */
+            font-weight: normal;
+            color: #000000;         /* Solid black text */
+        }
+
+        /* Targets the 'Essays' link specifically to keep it black and non-underlined */
+        .top-left-label a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        /* Positioned at the top right of the middle column, styled black and matches standard text size */
+        .top-right-label {
+            position: absolute;
+            top: 1em;
+            right: 1.5em;
+            font-size: 1em;         /* Set to 1em to match the body text size exactly */
+            font-weight: normal;
+            color: #000000;         /* Solid black text */
+        }
+
+        /* Targets the 'Romanian' link specifically to keep it black and non-underlined */
+        .top-right-label a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        /* Styling the paragraph text to align to the left side of the column */
+        .center-column p {
+            text-align: left;
+            margin-bottom: 1em; /* Clean paragraph spacing */
+        }
+
+        /* Centered formulas matching regular text style exactly */
+        .formula {
+            text-align: center;
+            font-weight: normal; 
+            font-size: 1em;       
+            margin: 1.5em 0;     
+        }
+    </style>
+    <!-- Loads MathJax plugin to elegantly compile LaTeX math notation inside the web page -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="side-column"></div>
+        
+        <div class="center-column">
+            <!-- Top labels for the middle column -->
+            <div class="top-left-label"><a href="essays">Essays</a></div>
+            <div class="top-right-label"><a href="">Romanian</a></div>
+
+            <h1>An Essay on the Equations of Morality</h1>
+            <h2>By: Victor Anton Munteanu Ciurușniuc</h2>
+            <!-- Added duplicate line keeping matching small gray formatting style perfectly -->
+            <h2 class="last-sub">24-6-2026</h2>
+            
+            <p>What is morality? If one were to look up the definition of morality, the first answer that would pop up would be: the principles and values that guide individuals in determining what is right or wrong, good or bad, and just or unjust. But what does that really mean? How do we know what is right or wrong, good or bad, just or unjust? To answer these questions, a long conversation is necessary, and it cannot be had in just one essay. However, in this essay, I will present two simple equations that are generally applicable, and can calculate whether an action is or is not moral, independent of what person or culture uses it.</p>
+            
+            <p>I believe that morality has two parts: the first being what I call the hierarchical levels of impartiality and the second, moral facts.</p>
+            
+            <p>The hierarchical levels of impartiality refer to the different levels or “castes” that various people, animals, or other entities might fall under. For example, if a person murders another person, it would be considered immoral because all people are typically viewed as being on the same hierarchical level. Inversely, if a person murders an insect, many wouldn’t bat an eye because they view insects as part of a lower level of hierarchy.</p>
+            
+            <p>The hierarchical level of impartiality may change depending on who is using it. For example, in Western Culture, people of any sex, religion, or color are viewed as equal. However, in a different society where these views are not held, one must simply adjust the hierarchical levels and the equation must still apply. This means that should someone break a moral fact against an entity of an equal or higher hierarchical level, then impartiality must be held true, and you must judge both the victim and the aggressor as peers who must treat each other in a moral manner. However, should someone break a moral fact against an entity of a lower hierarchical level, it is logical to not view them impartially as they can be treated immorally.</p>
+            
+            <p>As for moral facts, they can change depending on what person or culture is defining them. However, I have found that moral facts are beliefs that people think should always be upheld by an aggressor of a lower or equal hierarchical level as the victim. Examples of commonly held moral facts are “do not kill” and “do not steal.”</p>
+            
+            <p>With this information, we are therefore able to build two simple equations to calculate whether a given action is moral (M) or not. For these equations, we will consider the person or people committing the action to be the aggressors (A), and the people affected by the action to be the victims (V). We will give the aggressors a constant value of 0.5 and the victims a value of either 1, if of a higher or equal hierarchical level or 0.5, if of a lower hierarchical level. This equation written out would be:</p>
+            
+            <div class="formula">
+                $$M = A + V$$
+            </div>
+            
+            <p>Should the result (M) of this equation be equal to 1, the action can be considered moral. Whereas, if the result is greater than 1 the possibility for immorality remains open and you consult the next equation.</p>
+            
+            <p>The second equation should consist of two variables: adhered to moral facts (AMF) and the quantity of total moral facts (TMF). This equation written out would be:</p>
+            
+            <div class="formula">
+                $$M = \frac{AMF}{TMF}$$
+            </div>
+            
+            <p>Should the result (M) of this equation be equal to 1, the action can be considered moral. However, if the result is less than 1, it can be concluded that it is immoral.</p>
+            
+            <p>These equations can span over a wide variety of situations and be adjusted for use in any number of settings. For example, if used in a judicial setting during a self defense trial, one might assign the attacker (V) a lower hierarchical level than the person who defended themselves (A). Making the first equation 0.5+0.5=1. Thus showing that the person defending themselves is morally justified.</p>
+            
+            <p>Another example is a man who murders his brother. In this case, the first equation will be 0.5+1=1.5 and thus we can conclude that the action may be immoral. Therefore we move on to the next equation where we will consider only one moral fact: “thou shalt not kill.” Using only this moral fact, the second equation will be 0/1=0. Due to the fact that 0 is less than 1, we can conclude that the action is immoral.</p>
+            
+            <p>Should one be aligned with the idea of moral isolationism or consider that it may take a great deal of time to understand a different person or culture's morality, one must simply consult these simple equations. Using even a basic knowledge of any culture or person, one will be able to answer whether any given act is moral or immoral from the observed perspective. After reaching the conclusion of whether an action is or is not moral, we must simply put in the effort to either accept the different norms or take action to change them.</p>
+        </div>
+        
+        <div class="side-column"></div>
+    </div>
+
+</body>
+</html>
