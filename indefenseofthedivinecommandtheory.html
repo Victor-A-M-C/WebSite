@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor A.M.C</title>
+    <style>
+        /* Reset margins and paddings to prevent gaps */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            overflow-y: auto; /* Moves the scrollbar to the far right of the screen */
+        }
+
+        /* Use CSS Grid to perfectly slice the screen into 20% / 60% / 20% */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            min-height: 100vh; /* Keeps columns full height even if content is short */
+        }
+
+        /* Left and Right columns */
+        .side-column {
+            background-color: #86C0ED;
+        }
+
+        /* Center column with borders */
+        .center-column {
+            background-color: #DEDED2;
+            padding: 20px;
+            padding-bottom: 3em; /* Adds exactly 2 rows of empty space at the very bottom of the text */
+            position: relative;  /* Allows absolute positioning relative to this column */
+            
+            /* Borders between the sections */
+            border-left: 4px solid #86C0ED;
+            border-right: 4px solid #86C0ED;
+        }
+
+        /* Styling the main header to stay centered and pushed down */
+        .center-column h1 {
+            text-align: center;
+            margin-top: 1em; 
+            margin-bottom: 0.2em; /* Small gap between main header and small text */
+        }
+
+        /* Styling the small header text beneath the main title */
+        .center-column h2 {
+            text-align: center;
+            font-size: 0.9em;       /* Makes the text small */
+            font-weight: normal;    /* Removes heavy bolding */
+            color: #555555;         /* Gives it a subtle grey color */
+            margin-bottom: 0.2em;   /* Pulls the duplicated line tightly underneath */
+        }
+
+        /* Creates the structural empty row/gap after the final sub-header line */
+        .center-column h2.last-sub {
+            margin-bottom: 2.5em;
+        }
+
+        /* Positioned at the top left of the middle column, styled black and matches standard text size */
+        .top-left-label {
+            position: absolute;
+            top: 1em;
+            left: 1.5em;
+            font-size: 1em;         /* Set to 1em to match the body text size exactly */
+            font-weight: normal;
+            color: #000000;         /* Solid black text */
+        }
+
+        /* Targets the 'Essays' link specifically to keep it black and non-underlined */
+        .top-left-label a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        /* Positioned at the top right of the middle column, styled black and matches standard text size */
+        .top-right-label {
+            position: absolute;
+            top: 1em;
+            right: 1.5em;
+            font-size: 1em;         /* Set to 1em to match the body text size exactly */
+            font-weight: normal;
+            color: #000000;         /* Solid black text */
+        }
+
+        /* Targets the 'Romanian' link specifically to keep it black and non-underlined */
+        .top-right-label a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        /* Styling the paragraph text to align to the left side of the column */
+        .center-column p {
+            text-align: left;
+            margin-bottom: 1em; /* Clean paragraph spacing */
+        }
+
+        /* Centered formulas matching regular text style exactly */
+        .formula {
+            text-align: center;
+            font-weight: normal; 
+            font-size: 1em;       
+            margin: 1.5em 0;     
+        }
+    </style>
+    <!-- Loads MathJax plugin to elegantly compile LaTeX math notation inside the web page -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="side-column"></div>
+        
+        <div class="center-column">
+            <!-- Top labels for the middle column -->
+            <div class="top-left-label"><a href="essays">Essays</a></div>
+            <div class="top-right-label"><a href="">Română</a></div>
+
+            <h1>In Defense of the Divine Command Theory</h1>
+            <h2>By: Victor Anton Munteanu Ciurușniuc</h2>
+            <!-- Added duplicate line keeping matching small gray formatting style perfectly -->
+            <h2 class="last-sub">13-7-2026</h2>
+            
+            <p>The divine command theory is the ethical view that an action’s moral status is dependent on whether God commands or forbids it. A classic response to this theory is Euthyphro by Aristotle in which Socrates questions whether the gods make moral truth or merely recognize it.</p>
+            
+            <p>Asking if the gods make moral truth is essentially questioning whether an action is moral due to their dictation no matter what. For example, we recognize killing an innocent as immoral, however if the gods said it was moral would that make it so? Most would say no.</p>
+            
+            <p>On the other hand, if the gods merely recognize moral truth, this means that it must exist outside of their command and they have no control over morality, which is by definition an impious belief. These arguments against divine command theory were later used to counter Christian scholars on their moral theories.</p>
+            
+            <p>However, there is another explanation that this rebuttal does not consider: the idea that man was created by God to be most benefited by God’s moral system. The argument hinges on the fact that without God these moral truths would still exist. However, this fails to recognize the fact that without God man himself would not exist, and should man not exist, then moral systems would not exist either.</p>
+            
+            <p>As stated before we can see that God’s moral system was created to apply to and benefit man. An example of this is the classic statement “thou shalt not kill.” If a man kills another man, he has committed an immoral act and gone against God’s teachings. However, should a star expand and engulf another star, eventually exploding, killing them both, the star is not immoral even though it is also God’s creation. This is due to the fact that stars were not created by God to abide by the same moral principles as man.</p>
+            
+            <p>Another example is the black widow spider, which eats its mate after or sometimes even during mating. A devout Christian would not presume to call the black widow spider immoral for this action, although it is also one of God's creations. This is due to the fact that it, much like the star, was not made to follow the morality of man.</p>
+
+            <p>Moral concepts must be abided by man, therefore they must exist in congruence with man. Should man not exist, then morality could not exist either. Due to the fact that God created man, it then follows that God simultaneously created the moral systems which define him.</p>
+        </div>
+        
+        <div class="side-column"></div>
+    </div>
+
+</body>
+</html>
