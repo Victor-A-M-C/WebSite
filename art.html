@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor A.M.C</title>
+    <style>
+        /* Reset margins and paddings to prevent gaps */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            overflow-y: auto; /* Moves the scrollbar to the far right of the screen */
+        }
+
+        /* Use CSS Grid to perfectly slice the screen into 20% / 60% / 20% */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            min-height: 100vh; /* Keeps columns full height even if content is short */
+        }
+
+        /* Left and Right columns set uniformly to DEDED2 */
+        .side-column {
+            background-color: #DEDED2;
+        }
+
+        /* Center column with borders matching the background color */
+        .center-column {
+            background-color: #DEDED2;
+            padding: 20px;
+            padding-bottom: 3em; /* Adds exactly 2 rows of empty space at the very bottom of the text */
+            position: relative;  /* Allows absolute positioning relative to this column */
+            
+            /* Borders between the sections */
+            border-left: 4px solid #DEDED2;
+            border-right: 4px solid #DEDED2;
+        }
+
+        /* Styling the main header to stay centered and pushed down */
+        .center-column h1 {
+            text-align: center;
+            margin-top: 1em; 
+            margin-bottom: 0.2em; /* Small gap between main header and small text */
+        }
+
+        /* Styling the small header text beneath the main title */
+        .center-column h2 {
+            text-align: center;
+            font-size: 0.9em;       /* Makes the text small */
+            font-weight: normal;    /* Removes heavy bolding */
+            color: #555555;         /* Gives it a subtle grey color */
+            margin-bottom: 0.2em;   /* Pulls the duplicated line tightly underneath */
+        }
+
+        /* Creates the structural empty row/gap after the final sub-header line */
+        .center-column h2.last-sub {
+            margin-bottom: 2.5em;
+        }
+
+        /* Positioned at the top left of the middle column, styled black and matches standard text size */
+        .top-left-label {
+            position: absolute;
+            top: 1em;
+            left: 1.5em;
+            font-size: 1em;         /* Set to 1em to match the body text size exactly */
+            font-weight: normal;
+            color: #000000;         /* Solid black text */
+        }
+
+        /* Targets the 'Essays' link specifically to keep it black and non-underlined */
+        .top-left-label a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        /* Positioned at the top right of the middle column, styled black and matches standard text size */
+        .top-right-label {
+            position: absolute;
+            top: 1em;
+            right: 1.5em;
+            font-size: 1em;         /* Set to 1em to match the body text size exactly */
+            font-weight: normal;
+            color: #000000;         /* Solid black text */
+        }
+
+        /* Targets the 'Romanian' link specifically to keep it black and non-underlined */
+        .top-right-label a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        /* Container that forces items into a centered, vertical column layout */
+        .image-row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 2em;
+        }
+
+        /* Individual wrapper item for each image and its text group */
+        .image-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%; /* Spans the full width of the central column grid slot */
+            margin-bottom: 40px; /* Vertical spacing between each image block unit */
+        }
+
+        /* Clean finish removal for the final item block's bottom spacing */
+        .image-item:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Width set explicitly to 45% of the column, height constrained proportionally */
+        .image-item img {
+            width: 45%;
+            max-height: 45vh; 
+            object-fit: contain; /* Prevents stretching if width/height aspect ratios clash */
+            display: block;
+            margin-bottom: 10px; /* Gap between image and its caption text */
+        }
+
+        /* Individual text block description matching standard site copy size */
+        .image-caption {
+            font-size: 1em;
+            color: #333333;
+            font-weight: normal;
+            line-height: 1.4;
+            max-width: 60%; /* Keeps text line lengths well-proportioned under smaller images */
+        }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="side-column"></div>
+        
+        <div class="center-column">
+            <div class="top-left-label"><a href="index">Home</a></div>
+            <div class="top-right-label"><a href="ro/arta">Română</a></div>
+
+            <h1>Art</h1>
+            <h2></h2>
+            <h2 class="last-sub"></h2>
+
+            <div class="image-row">
+                <div class="image-item">
+                    <img src="piece4.jpg" alt="Artwork 1">
+                    <div class="image-caption"><b>Ia Modernă</b></div>
+                    <div>38x26</div>
+                    <div>Oil on Canvas</div>
+                    <div>On Display at the Romanian American Cultural Center in Minnesota</div>
+                    <div>2026</div>
+                </div>
+                <div class="image-item">
+                    <img src="piece3.jpg" alt="Artwork 2">
+                    <div class="image-caption"><b>Casă Țărănească</b></div>
+                    <div>24x36</div>
+                    <div>Oil on Canvas</div>
+                    <div>On Display in a Private Collection</div>
+                    <div>2026</div>
+                </div>
+                <div class="image-item">
+                    <img src="piece2.jpg" alt="Artwork 3">
+                    <div class="image-caption"><b>Frezii</b></div>
+                    <div>18x13</div>
+                    <div>Oil on Canvas</div>
+                    <div>On Display in a Private Collection</div>
+                    <div>2026</div>
+                </div>
+                <div class="image-item">
+                    <img src="piece1.jpg" alt="Artwork 4">
+                    <div class="image-caption"><b>La Cireșe</b></div>
+                    <div>33x26</div>
+                    <div>Oil on Canvas</div>
+                    <div>On Display in a Private Collection</div>
+                    <div>2026</div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="side-column"></div>
+    </div>
+
+</body>
+</html>
