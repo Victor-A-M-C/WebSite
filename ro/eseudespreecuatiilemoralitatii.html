@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor A.M.C</title>
+    <style>
+        /* Reset margins and paddings to prevent gaps */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            overflow-y: auto; /* Moves the scrollbar to the far right of the screen */
+        }
+
+        /* Use CSS Grid to perfectly slice the screen into 20% / 60% / 20% */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            min-height: 100vh; /* Keeps columns full height even if content is short */
+        }
+
+        /* Left and Right columns */
+        .side-column {
+            background-color: #86C0ED;
+        }
+
+        /* Center column with borders */
+        .center-column {
+            background-color: #DEDED2;
+            padding: 20px;
+            padding-bottom: 3em; /* Adds exactly 2 rows of empty space at the very bottom of the text */
+            position: relative;  /* Allows absolute positioning relative to this column */
+            
+            /* Borders between the sections */
+            border-left: 4px solid #86C0ED;
+            border-right: 4px solid #86C0ED;
+        }
+
+        /* Styling the main header to stay centered and pushed down */
+        .center-column h1 {
+            text-align: center;
+            margin-top: 1em; 
+            margin-bottom: 0.2em; /* Small gap between main header and small text */
+        }
+
+        /* Styling the small header text beneath the main title */
+        .center-column h2 {
+            text-align: center;
+            font-size: 0.9em;       /* Makes the text small */
+            font-weight: normal;    /* Removes heavy bolding */
+            color: #555555;         /* Gives it a subtle grey color */
+            margin-bottom: 0.2em;   /* Pulls the duplicated line tightly underneath */
+        }
+
+        /* Creates the structural empty row/gap after the final sub-header line */
+        .center-column h2.last-sub {
+            margin-bottom: 2.5em;
+        }
+
+        /* Positioned at the top left of the middle column, styled black and matches standard text size */
+        .top-left-label {
+            position: absolute;
+            top: 1em;
+            left: 1.5em;
+            font-size: 1em;         /* Set to 1em to match the body text size exactly */
+            font-weight: normal;
+            color: #000000;         /* Solid black text */
+        }
+
+        /* Targets the 'Essays' link specifically to keep it black and non-underlined */
+        .top-left-label a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        /* Positioned at the top right of the middle column, styled black and matches standard text size */
+        .top-right-label {
+            position: absolute;
+            top: 1em;
+            right: 1.5em;
+            font-size: 1em;         /* Set to 1em to match the body text size exactly */
+            font-weight: normal;
+            color: #000000;         /* Solid black text */
+        }
+
+        /* Targets the 'Romanian' link specifically to keep it black and non-underlined */
+        .top-right-label a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        /* Styling the paragraph text to align to the left side of the column */
+        .center-column p {
+            text-align: left;
+            margin-bottom: 1em; /* Clean paragraph spacing */
+        }
+
+        /* Centered formulas matching regular text style exactly */
+        .formula {
+            text-align: center;
+            font-weight: normal; 
+            font-size: 1em;       
+            margin: 1.5em 0;     
+        }
+    </style>
+    <!-- Loads MathJax plugin to elegantly compile LaTeX math notation inside the web page -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="side-column"></div>
+        
+        <div class="center-column">
+            <!-- Top labels for the middle column -->
+            <div class="top-left-label"><a href="eseuri">Eseuri</a></div>
+            <div class="top-right-label"><a href="../essayontheequationsofmorality">English</a></div>
+
+            <h1>Eseu Despre Ecuațiile Moralității</h1>
+            <h2>De: Victor Anton Munteanu Ciurușniuc</h2>
+            <!-- Added duplicate line keeping matching small gray formatting style perfectly -->
+            <h2 class="last-sub">24-6-2026</h2>
+            
+            <p>Ce este moralitatea? Conform Dicționarului Explicativ al Limbii Române, moralitatea este un ansamblu de principii, valori și norme care ghidează comportamentul uman, distingând între bine și rău sau corect și greșit. Dar asta ce înseamnă de fapt? Cum știm ce este bine și rău sau corect și greșit? Ca să răspundem la întrebările acestea o conversație lungă este necesară, însă nu se poate întâmpla doar într-un eseu. În acest eseu voi prezenta însă două ecuații simple care sunt general valabile și care pot calcula dacă o acțiune este morală sau imorală independent de persoana sau de cultura care le folosește.</p>
+            
+            <p>După părerea mea moralitatea are două părți: prima este dată de nivelele ierarhice de imparțialitate și a doua de către faptele morale.</p>
+            
+            <p>Nivelele ierarhice de imparțialitate se referă la nivelele sau castele diferite de care oameni, animale sau alte entități variate aparțin. De exemplu, dacă o persoană omoară o altă persoană, acțiunea aceasta este considerată imorală deoarece toți oamenii sunt considerați că aparțin aceluiași nivel ierarhic. Pe de altă parte, dacă o persoană omoară o insectă, multora nu le-ar păsa fiindcă ei văd insectele ca aparținând unui nivel ierarhic inferior.</p>
+            
+            <p>Nivelele ierarhice de imparțialitate se pot schimba dependent de cine le folosește. De exemplu, în cultura occidentală, oamenii de orice sex, religie sau culoare sunt văzuți ca egali. Pe de altă parte, într-o altă societate în care aceste valori nu sunt respectate, trebuie numai să ajustăm nivelele ierarhice și ecuațiile ar trebui să funcționeze. Aceasta înseamnă că dacă o persoană încalcă un fapt moral împotriva unei entități de nivel ierarhic egal sau superior, imparțialitatea rămâne adevărată. În acest caz victima și agresorul sunt asociați care ar trebui să se poarte unul cu celălalt într-o manieră morală. Însă dacă o persoană încalcă un fapt moral contra unei entități de nivel ierarhic inferior, este logic să nu percepi entitățile ca asociați deoarece entitatea de nivel inferior poate fi tratată imoral.</p>
+            
+            <p>Faptele morale se pot schimba dependent de persoana sau de cultura care le definește. Însă am realizat că faptele morale sunt concepte pe care oamenii cred că ar trebui să fie respectate de către un agresor de nivel ierarhic inferior sau egal cu cel al victimei. Exemple comune de fapte morale sunt “nu ucide” și “nu fura."</p>
+            
+            <p>Cu această informație putem să creăm două ecuații simple care pot calcula dacă o acțiune este morală (M) sau nu. Pentru aceste ecuații vom considera persoana sau persoanele care acționează ca agresori (A), și persoanele afectate ca victime (V). Vom da agresorilor o valoare constantă de 0,5 și victimelor o valoare de 1 dacă aparțin unui nivel ierarhic superior sau egal cu al agresorilor, sau 0,5 dacă aparțin unui nivel ierarhic inferior. Cu aceste valori prima ecuație a moralității devine:</p>
+            
+            <div class="formula">
+                $$M = A + V$$
+            </div>
+            
+            <p>Dacă M este egal cu 1, acțiunea este considerată morală. Însă dacă M are valoare mai mare ca 1, posibilitatea de imoralitate rămâne valabilă. În acest caz, a doua ecuație trebuie consultată.</p>
+            
+            <p>A doua ecuație folosește două variabile: aderarea la fapte morale (AFM) și cantitatea totală de fapte morale (TFM). Cu aceste variabile a doua ecuație devine:</p>
+            
+            <div class="formula">
+                $$M = \frac{AFM}{TFM}$$
+            </div>
+            
+            <p>Dacă a doua ecuație produce un rezultat egal cu 1, această acțiune este considerată morală. Însă dacă rezultatul este mai mic decât 1, se determină că acțiunea este imorală.</p>
+            
+            <p>Aceste ecuații pot fi aplicate la o multitudine de situații și pot fi ajustate pentru a fi folosite în diferite circumstanțe. De exemplu, dacă ecuațiile ar fi folosite într-un mediu juridic într-un caz de legitimă apărare, vom asigna atacantului (V în acest caz) un nivel ierarhic inferior față de persoana care este în legitimă apărare (A în acest caz). Prima ecuație devine 0,5+0,5=1, arătând că persoana în legitimă apărare este justificată moral.</p>
+            
+            <p>Un alt exemplu este când o persoană își omoară fratele. În acest caz, prima ecuație devine 0,5+1=1,5 arătând că acțiunea poate fi imorală. Însă consultând a doua ecuație vom considera doar un fapt moral: “să nu ucizi.” Folosind doar acest fapt moral, a doua ecuație devine 0/1=0. Deoarece 0 este mai mic decât 1 putem să concluzionăm că acțiunea este imorală.</p>
+            
+            <p>Dacă o persoană favorizează idea de izolaționism moral sau consideră că i-ar lua mult timp să înțeleagă moralitatea unei alte persoane sau culturi, acea persoană doar trebuie să consulte aceste două ecuații simple. Folosind doar o înțelegere elementară a oricărei persoane sau culturi, acea persoană poate distinge dacă oricare acțiune este morală sau imorală din perspectiva observată. După ce se trage concluzia dacă o acțiune este morală sau imorală doar trebuie depus efortul de a accepta diversele norme sau a lua acțiune de a le schimba.</p>
+        </div>
+        
+        <div class="side-column"></div>
+    </div>
+
+</body>
+</html>
