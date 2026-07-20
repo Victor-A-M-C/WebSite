@@ -59,7 +59,7 @@
             margin-bottom: 0.2em;   /* Pulls the duplicated line tightly underneath */
         }
 
-        /* Creates the empty row/gap before the main text starts on the final subtitle row */
+        /* Creates the structural empty row/gap after the final sub-header line */
         .center-column h2.last-sub {
             margin-bottom: 2.5em;
         }
@@ -69,12 +69,12 @@
             position: absolute;
             top: 1em;
             left: 1.5em;
-            font-size: 1em;         /* Matches the body text size exactly */
+            font-size: 1em;         /* Set to 1em to match the body text size exactly */
             font-weight: normal;
             color: #000000;         /* Solid black text */
         }
 
-        /* Keeps the 'Eseuri' link clean, black, and non-underlined */
+        /* Targets the 'Essays' link specifically to keep it black and non-underlined */
         .top-left-label a {
             color: #000000;
             text-decoration: none;
@@ -85,12 +85,12 @@
             position: absolute;
             top: 1em;
             right: 1.5em;
-            font-size: 1em;         /* Matches the body text size exactly */
+            font-size: 1em;         /* Set to 1em to match the body text size exactly */
             font-weight: normal;
             color: #000000;         /* Solid black text */
         }
 
-        /* Keeps the 'English' link clean, black, and non-underlined */
+        /* Targets the 'Romanian' link specifically to keep it black and non-underlined */
         .top-right-label a {
             color: #000000;
             text-decoration: none;
@@ -110,6 +110,9 @@
             margin: 1.5em 0;     
         }
     </style>
+    <!-- Loads MathJax plugin to elegantly compile LaTeX math notation inside the web page -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
@@ -118,17 +121,17 @@
         
         <div class="center-column">
             <!-- Top labels for the middle column -->
-            <div class="top-left-label"><a href="eseuri">Eseuri</a></div>
-            <div class="top-right-label"><a href="../anessayonessays">English</a></div>
+            <div class="top-left-label"><a href="essays">Essays</a></div>
+            <div class="top-right-label"><a href="ro/eseudespreeseuri">Română</a></div>
 
-            <h1>Eseu Despre Eseuri</h1>
-            <h2>De: Victor Anton Munteanu Ciurușniuc</h2>
-            <h2 class="last-sub">16-6-2026</h2>
+            <h1>An Essay on Essays</h1>
+            <h2>By: Victor Anton Munteanu Ciurușniuc</h2>
+            <!-- Added duplicate line keeping matching small gray formatting style perfectly -->
+            <h2 class="last-sub">6-16-2026</h2>
             
-            <p>Perfecțiunea nu este un scop rezonabil sau realizabil, și singura șansă pe care o avem de-a putea realiza scopul perfecțiunii este prin încercări și revizuiri. În opera Naturalis Historia (Istoria Naturală) a lui Gaius Plinius Secundus (Pliniu Cel Bătrân) este documentat că artiștii greci, de exemplu Apelles și Polykleitos (Policlet), au semnat lucrările lor cu imperfectul verbului "a face" ca să descrie că acestea nu sunt perfecte. De asemenea, Michelangelo a semnat piesa lui Pietà cu "faciebat" ca să descrie și el că nici o lucrare nu poate fi terminată. O piesă poate fi întotdeauna îmbunătățită chiar dacă felul de a o îmbunătăți este ceva minuscul sau microscopic. Asta nu înseamnă că lucrările lor n-au avut revizuiri, dimpotrivă lucrările acestea sunt ultimele dintr-o linie lungă. Însă pentru oricare lucrare pe care o facem fie că este o piesă de artă, un eseu, o poezie sau o piesă de arhitectură tot ce contează este că un creator face primul pas și puțin câte puțin ajunge la cel mai bun rezultat pe care l-ar putea realiza.</p>
+            <p>Perfection is not a reasonable or accomplishable goal, and the only chance that we have to reach the goal of perfection is through trying and revising. In the work Naturalis Historia (Natural History) by Gaius Plinius Secundus (Pliny the Elder) it is documented that Greek artists, for example Apelles and Polykleitos, signed their works with the imperfect verb “a face” to state that their works are not perfect. In the same way, Michelangelo signed his Pietà with “faciebat” in order to state that no work can truly be finished. Any work can always be improved even if the improvement is miniscule or microscopic. This does not mean that their works did not have revisions. On the contrary, these creations are the last in a long list. Therefore, for any work that we create, whether it is a piece of art, an essay, a poem, or a piece of architecture, the only thing that matters is that the creator makes the first step and little by little reaches the best result that they can create.</p>
 
-            <p>Un eseu din punctul meu de vedere e doar o revizuire în lucrarea noastră numită viață. Cu un eseu noi putem să exprimăm ideile și învățămintele noastre. Doar prin scris și explicând putem să fim siguri că înțelegem ceea ce credem și învățăm. De asemenea, doar prin discurs putem să fim siguri că punctul nostru de vedere este educat și corect, și nu doar o perspectivă minimalistă. Însă un eseu nu trebuie să fie neapărat perfect, fără dezacorduri și greșeli, fiindcă e doar o lucrare. Și doar prin lucrări putem se ne îmbogățim mințile, perspectivele și pe cei din jur.</p>
-
+            <p>An essay, in my opinion, is simply the first revision in the larger work that we call life. With an essay we can express our ideas and what we have learned. Only through writing and explaining can we be sure that we understand what we learn and believe. The same way, only through discourse can we be sure that our point of view is educated and correct, and not simply a minimalistic perspective. An essay does not need to be perfect, without typos and mistakes, because it is only one work. And only through our work can we enrich our minds, perspectives, and peers.</p>
         </div>
         
         <div class="side-column"></div>
