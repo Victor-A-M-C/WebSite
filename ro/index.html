@@ -70,6 +70,12 @@ font-size: 18px;
 margin: 2px 0;
 }
 
+/* Styled to match the other navigation elements (plain black, no underline) */
+.email-link {
+color: #000000;
+text-decoration: none;
+}
+
 .about-link {
 color: #000000;
 text-decoration: none;
@@ -105,7 +111,8 @@ margin: 2px 0;
 <section class="split">
 <div class="text-side">
 <h1>Victor Anton Munteanu Ciurușniuc</h1>
-<p>contact.victoramc@gmail.com</p>
+<!-- Added mailto link, target="_blank", and class="email-link" -->
+<p><a target="_blank" href="mailto:contact.victoramc@gmail.com" rel="noopener" class="email-link">contact.victoramc@gmail.com</a></p>
 <br>
 <a href="despre" class="about-link">Despre</a>
 <a href="arta" class="arta-link">Artă</a>

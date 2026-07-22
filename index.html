@@ -70,6 +70,12 @@ font-size: 18px;
 margin: 2px 0;
 }
 
+/* Email styling added here to remove underline and make text black */
+.email-link {
+color: #000000;
+text-decoration: none;
+}
+
 .about-link {
 color: #000000;
 text-decoration: none;
@@ -103,7 +109,8 @@ margin: 2px 0;
 <section class="split">
 <div class="text-side">
 <h1>Victor Anton Munteanu Ciurușniuc</h1>
-<p>contact.victoramc@gmail.com</p>
+<!-- Added class="email-link" and closed the missing </a> tag -->
+<p><a target="_blank" href="mailto:contact.victoramc@gmail.com" rel="noopener" class="email-link">contact.victoramc@gmail.com</a></p>
 <br>
 <a href="about" class="about-link">About</a>
 <a href="art" class="art-link">Art</a>
