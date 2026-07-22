@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor A.M.C</title>
+    <style>
+        /* Reset margins and paddings to prevent gaps */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            overflow-y: auto; /* Moves the scrollbar to the far right of the screen */
+        }
+
+        /* Use CSS Grid to perfectly slice the screen into 20% / 60% / 20% */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            min-height: 100vh; /* Keeps columns full height even if content is short */
+        }
+
+        /* Left and Right columns */
+        .side-column {
+            background-color: #86C0ED;
+        }
+
+        /* Center column with borders */
+        .center-column {
+            background-color: #DEDED2;
+            padding: 20px;
+            padding-bottom: 3em; /* Adds exactly 2 rows of empty space at the very bottom of the text */
+            position: relative;  /* Allows absolute positioning relative to this column */
+            
+            /* Borders between the sections */
+            border-left: 4px solid #86C0ED;
+            border-right: 4px solid #86C0ED;
+        }
+
+        /* Styling the main header to stay centered and pushed down */
+        .center-column h1 {
+            text-align: center;
+            margin-top: 1em; 
+            margin-bottom: 0.2em; /* Small gap between main header and small text */
+        }
+
+        /* Styling the small header text beneath the main title */
+        .center-column h2 {
+            text-align: center;
+            font-size: 0.9em;       /* Makes the text small */
+            font-weight: normal;    /* Removes heavy bolding */
+            color: #555555;         /* Gives it a subtle grey color */
+            margin-bottom: 0.2em;   /* Pulls the duplicated line tightly underneath */
+        }
+
+        /* Creates the empty row/gap before the main text starts on the final subtitle row */
+        .center-column h2.last-sub {
+            margin-bottom: 2.5em;
+        }
+
+        /* Positioned at the top left of the middle column, styled black and matches standard text size */
+        .top-left-label {
+            position: absolute;
+            top: 1em;
+            left: 1.5em;
+            font-size: 1em;         /* Matches the body text size exactly */
+            font-weight: normal;
+            color: #000000;         /* Solid black text */
+        }
+
+        /* Keeps the 'Eseuri' link clean, black, and non-underlined */
+        .top-left-label a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        /* Positioned at the top right of the middle column, styled black and matches standard text size */
+        .top-right-label {
+            position: absolute;
+            top: 1em;
+            right: 1.5em;
+            font-size: 1em;         /* Matches the body text size exactly */
+            font-weight: normal;
+            color: #000000;         /* Solid black text */
+        }
+
+        /* Keeps the 'English' link clean, black, and non-underlined */
+        .top-right-label a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        /* Styling the paragraph text to align to the left side of the column */
+        .center-column p {
+            text-align: left;
+            margin-bottom: 1em; /* Clean paragraph spacing */
+        }
+
+        /* Centered formulas matching regular text style exactly */
+        .formula {
+            text-align: center;
+            font-weight: normal; 
+            font-size: 1em;       
+            margin: 1.5em 0;     
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="side-column"></div>
+        
+        <div class="center-column">
+            <!-- Top labels for the middle column -->
+            <div class="top-left-label"><a href="eseuri">Eseuri</a></div>
+            <div class="top-right-label"><a href="../anessayonai">English</a></div>
+
+            <h1>Eseu Despre AI</h1>
+            <h2>De: Victor Anton Munteanu Ciurușniuc</h2>
+            <h2 class="last-sub">20-6-2026</h2>
+            
+            <p>Dintre toate instrumentele pe care le avem la dispoziție în ziua de astăzi, AI poate fi cea mai puternică, dar și cea mai distructivă. În ziua de azi o persoană poate vorbi cu un LLM oricând vrea și despre orice vrea, și poate fi sigură că va primi un răspuns, poate nu cel mai bun răspuns, dar un răspuns oricum. Prin conversațiile utilizatorului cu AI, acesta poate fi indus în eroare și făcut să creadă că reține informație nouă și că învață. Însă consultând studii despre cum mintea se activează când folosește AI, aflăm că de fapt opusul este adevărat.</p>
+
+            <p>Într-un studiu la MIT s-au format trei grupuri de persoane care au fost puse să scrie eseuri: prima nu folosea nimic în afară de creierul lor, a doua folosea un simplu browser și a treia utiliza ChatGPT. Persoanele acestea au avut sarcina cognitivă monitorizată folosind electroencefalografie (EEG) iar eseurile lor au fost evaluate de un panel de profesori și de AI. Concluzia trasă a fost că pe primul loc s-au situat persoanele care nu foloseau AI sau browser-ul. Acestora li s-au activat mai multe părți ale creierului și au avut o conexiune neuronală mai puternică. Pe locul doi au fost persoanele care au folosit doar browser-ul având o activitate neuronală redusă. Pe ultimul loc s-au aflat persoanele care foloseau AI prezentând o “conexiune alfa și beta redusă” la nivelul creierului care arată subangajare neuronală. În plus, reținerea de informație a celor de pe ultimul loc a fost redusă. Mai mult decât atât, când persoanele din prima și ultima echipă au schimbat între ei modul de a scrie eseurile, rezultatele au fost similare. Persoanele care au început să folosească AI au prezentat conexiuni neuronale reduse, iar cei care foloseau doar creierul au prezentat o conexiune mai puternică și o reținere de informație mai precisă. Însă experimentul nu s-a terminat aici. Peste patru luni s-a observat că persoanele care au folosit AI consistent subperformau la nivel lingvistic, neuronal și comportamental.</p>
+
+            <p>Aflând această informație, întrebarea care urmează e clară: De ce se întâmplă așa ceva? O persoană învață când află informație, o prelucrează, și din ea face o lucrare. Prelucrarea informației se întâmplă atunci când o persoană se confruntă cu un subiect și se luptă cu informația până se ordonează în capul lor și este înțeleasă pe deplin. Folosind AI persoana ocolește prelucrarea informației și nu dezvoltă procesele înțelegerii. În acest caz, creierul nu crează căile neuronale necesare pentru a învăța și a înțelege subiectul respectiv.</p>
+
+            <p>Bazat pe faptele de mai sus și ținând cont de părerea altora în domeniul universitar, s-ar înțelege că mesajul meu este să nu folosești AI. Însă nu acesta este mesajul meu. Dimpotrivă eu sunt convins că AI are un potențial de a fi una dintre cele mai bune unelte pe care le avem la îndemână. Însă nu poate fi folosit ca un substitut pentru persoane. Folosind AI ca să înlocuiești mâna de lucru, să dai examene sau să scrii eseuri și articole este o metodă simplă de a-ți induce audiența și pe tine însuți în eroare. Din punctul meu de vedere cele mai potrivite discipline care pot folosi AI cu succes sunt matematica și informatica. Un alt exemplu în care AI poate fi utilizat cu eficacitate este ca un critic căruia îi dai o lucrare și îți găsește probleme de logică sau alte perspective.</p>
+
+            <p>Am observat însă că multe persoane folosesc AI să scurteze și să condenseze informația. Eu am făcut un studiu în care le-am pus pe ChatGPT, ClaudeAI și Google Gemini să-mi condenseze niște informație. În fiecare dintre cele trei modele de AI am introdus aceleași 200 de mesaje cu diverse tipuri de informație. Am cerut ca informația să fie condensată și apoi am analizat rezultatele obținute. Am observat că din cele 200 de mesaje pe care le-am introdus 40% au fost condensate incorect. Mesajele condensate duceau lipsă de informație critică care schimba în întregime percepția și contextul informației.</p>
+
+            <p>De asemenea, am discutat cu AI și despre probleme politice. De data asta am vorbit din mai multe puncte de vedere și am aflat că AI are 70% șansă să coroboreze punctul tău de vedere fără să te contrazică. Doar dacă întrebi direct pentru alte puncte de vedere sau cum o persoană din opoziție ți-ar răspunde, numai atunci AI îți dă o părere pertinentă sau chiar contrară. Dar dacă doar întrebi pentru informație despre un eveniment politic și deja îți cunoaște afilierea politică îți va da doar informație relevantă la perspectiva ta.</p>
+
+            <p>În plus, nu poți face o lucrare doar cu AI. Lucrările vor avea probleme oricum pentru că nici o lucrare nu poate fi perfectă. Prin folosirea de AI se elimină toate aspectele umane și creative din aceste lucrări. LLM-urile îți răspund și acționează într-un mod robotic. Aceștia nu crează idei noi sau originale și nu inventează un lucru nemaivăzut. Ei folosesc informația deja prezentată și analizată și intuiesc ce răspuns este cel mai rezonabil din toate posibilitățile existente. Asta nu înseamnă ca nu poți să folosești AI în nici un caz. Dimpotrivă, înseamnă că în orice împrejurare când folosești AI trebuie să te asiguri că este onest și că informația prezentată nu are erori și este relevantă cu cercetările tale.</p>
+
+        </div>
+        
+        <div class="side-column"></div>
+    </div>
+
+</body>
+</html>
