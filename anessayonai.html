@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor A.M.C</title>
+    <style>
+        /* Reset margins and paddings to prevent gaps */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #DEDED2;
+            overflow-x: hidden;
+            overflow-y: auto; /* Moves the scrollbar to the far right of the screen */
+        }
+
+        /* Use CSS Grid to perfectly slice the screen into 20% / 60% / 20% */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            min-height: 100vh; /* Keeps columns full height even if content is short */
+        }
+
+        /* Left and Right columns */
+        .side-column {
+            background-color: #86C0ED;
+        }
+
+        /* Center column with borders */
+        .center-column {
+            background-color: #DEDED2;
+            padding: 20px;
+            padding-bottom: 60px; /* Gives clearance above the copyright */
+            position: relative;  /* Allows absolute positioning relative to this column */
+            
+            /* Borders between the sections */
+            border-left: 4px solid #86C0ED;
+            border-right: 4px solid #86C0ED;
+        }
+
+        /* Styling the main header to stay centered and pushed down */
+        .center-column h1 {
+            text-align: center;
+            margin-top: 1em; 
+            margin-bottom: 0.2em; /* Small gap between main header and small text */
+        }
+
+        /* Styling the small header text beneath the main title */
+        .center-column h2 {
+            text-align: center;
+            font-size: 0.9em;       /* Makes the text small */
+            font-weight: normal;    /* Removes heavy bolding */
+            color: #555555;         /* Gives it a subtle grey color */
+            margin-bottom: 0.2em;   /* Pulls the duplicated line tightly underneath */
+        }
+
+        /* Creates the empty row/gap before the main text starts on the final subtitle row */
+        .center-column h2.last-sub {
+            margin-bottom: 2.5em;
+        }
+
+        /* Positioned at the top left of the middle column, styled black and matches standard text size */
+        .top-left-label {
+            position: absolute;
+            top: 1em;
+            left: 1.5em;
+            font-size: 1em;         /* Matches the body text size exactly */
+            font-weight: normal;
+            color: #000000;         /* Solid black text */
+        }
+
+        /* Keeps the 'Eseuri' link clean, black, and non-underlined */
+        .top-left-label a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        /* Positioned at the top right of the middle column, styled black and matches standard text size */
+        .top-right-label {
+            position: absolute;
+            top: 1em;
+            right: 1.5em;
+            font-size: 1em;         /* Matches the body text size exactly */
+            font-weight: normal;
+            color: #000000;         /* Solid black text */
+        }
+
+        /* Keeps the 'English' link clean, black, and non-underlined */
+        .top-right-label a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        /* Styling the paragraph text to align to the left side of the column */
+        .center-column p {
+            text-align: left;
+            margin-bottom: 1em; /* Clean paragraph spacing */
+        }
+
+        /* Centered formulas matching regular text style exactly */
+        .formula {
+            text-align: center;
+            font-weight: normal; 
+            font-size: 1em;       
+            margin: 1.5em 0;     
+        }
+
+        /* Bottom copyright notice centered in the middle column */
+        .copyright {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            font-weight: normal;
+            font-style: italic;
+            color: #000000;
+            white-space: nowrap;
+            z-index: 1000; /* Keeps it layered cleanly on top */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="side-column"></div>
+        
+        <div class="center-column">
+            <!-- Top labels for the middle column -->
+            <div class="top-left-label"><a href="essays">Essays</a></div>
+            <div class="top-right-label"><a href="ro/eseudespreai">Română</a></div>
+
+            <h1>An Essay On AI</h1>
+            <h2>By: Victor Anton Munteanu Ciurușniuc</h2>
+            <h2 class="last-sub">6-20-2026</h2>
+            
+            <p>Out of all of the tools that we have at our disposition in the modern day, AI might be the strongest, but possibly the most destructive. Today, someone can talk to an LLM whenever they want and about whatever they desire, and they can be sure that they will receive a response. Maybe not the best response, but a response nonetheless. Through the user's conversations with AI, the user can be misled and made to believe that they are retaining new information and learning. However, consulting with studies about how the mind activates when using AI, we can learn that in fact the opposite is true.</p>
+
+            <p>In a study at MIT, three groups of people were made to write essays: the first group did not use anything except their brains, the second group used only a simple browser, and the third group used ChatGPT. These people had their cognitive loads monitored using electroencephalography (EEG) and their essays evaluated by a panel of professors and AI. First place was given to the people who did not use AI or browsers. More parts of their brains were activated and they had stronger neural connections. Second place went to the people who used only the browser, who demonstrated reduced neural activity. In last place were the people who used AI who presented a “reduced alpha and beta connectivity” which demonstrates low neurological engagement. In addition, the people in last place had a reduced retention of information. More than that, when people in the first group and the last group switched their methods of writing essays, the results remained the same. People who started to use AI began to present a reduced neural connection, whereas those who started to use only their brains started to present a stronger connection and a more precise recollection of information. However, the experiment didn’t end here, over the next four months it was observed that people who used AI consistently underperformed at linguistic, neural, and behavioral levels.</p>
+
+            <p>Learning this information the following question is clear: Why would such a thing happen? A person learns something when they find out information, process it, and then create a project. Processing information happens when a person confronts a subject and fights with the information until it becomes ordered in their head and becomes completely understood. When a person uses AI, they bypass the fight with the information and do not digest it. In this case, the brain does not create the neural paths necessary to learn and understand the subject at hand.</p>
+
+            <p>Based on the aforementioned facts and keeping in mind the opinion of others in academia, it would be understandable to believe that my message is to not use AI. However, this is not the case. On the contrary, I am convinced that AI has the potential to be one of the best tools that we have at hand although it cannot be used as a substitute for people. Using AI to replace the workforce, take tests, or write essays and articles is a simple method to mislead your audience and yourself. From my point of view, the most appropriate disciplines to use AI with success would be mathematics and coding. Another example in which AI could be used efficiently is as a critic to whom you give your work and it locates logical fallacies or diverse perspectives.</p>
+
+            <p>I have observed that many people use AI to shorten and condense information. I conducted a study in which I instructed ChatGPT, ClaudeAI, and GoogleGemini to condense some text. I introduced 200 messages to each of these modules with diverse types of information. I told them to condense the information and then analyzed the results that I obtained. I observed that of the 200 messages that I introduced, 40% of them were condensed incorrectly. The condensed messages were missing critical information that completely changed the perception and context of the information.</p>
+
+            <p>On top of this, I discussed political problems with AI. This time I used more diverse view points and found out that AI has a 70% chance to corroborate your point of view without criticism. Only if you ask directly for a different point of view does AI give you a pertinent opinion or contradict you. However, if you ask for information about a political event and it already knows your political affiliation, it will only give you relevant information to your perspective.</p>
+
+            <p>In addition, you cannot create a project using only AI. Projects will have problems no matter what because no work can be perfect. Through the use of AI we eliminate all human and creative aspects from these works. LLMs respond and take action in a robotic manner. They do not create new or original ideas and they do not invent anything never before seen. They only use information that has already been presented and analyzed and they assume the response that is the most reasonable of all the possibilities that exist. This does not mean that you cannot use AI in any case, on the contrary, it means that in any case when you use AI you must be sure that the information that it presents is honest, does not present errors, and is relevant to your topic.</p>
+
+            <!-- Footer Copyright Notice placed INSIDE center-column -->
+            <div class="copyright">
+                Art &amp; Content © 2026 Victor Anton Munteanu Ciurușniuc
+            </div>
+        </div>
+
+        <div class="side-column"></div>
+    </div>
+
+</body>
+</html>
