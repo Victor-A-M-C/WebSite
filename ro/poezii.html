@@ -141,6 +141,20 @@
             align-items: center;
             margin-top: 40px; /* EQUIDISTANT 2-ROW GAP */
         }
+
+        /* Bottom copyright notice centered in the middle column */
+        .copyright {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            font-weight: bold;
+            font-style: italic;
+            color: #000000;
+            white-space: nowrap;
+            z-index: 1000; /* Keeps it layered cleanly on top */
+        }
     </style>
 </head>
 <body>
@@ -542,6 +556,11 @@
             <div class="section-text">
                 <div></div>
                 <div></div>
+            </div>
+
+            <!-- Footer Copyright Notice -->
+            <div class="copyright">
+                Art &amp; Content © 2026 Victor Anton Munteanu Ciurușniuc
             </div>
 
         </div>

@@ -15,6 +15,7 @@
         body, html {
             height: 100%;
             font-family: Arial, sans-serif;
+            background-color: #DEDED2;
             overflow-x: hidden;
             overflow-y: auto; /* Moves the scrollbar to the far right of the screen */
         }
@@ -35,7 +36,7 @@
         .center-column {
             background-color: #DEDED2;
             padding: 20px;
-            padding-bottom: 3em; /* Adds exactly 2 rows of empty space at the very bottom of the text */
+            padding-bottom: 60px; /* Gives clearance above the copyright */
             position: relative;  /* Allows absolute positioning relative to this column */
             
             /* Borders between the sections */
@@ -109,6 +110,20 @@
             font-size: 1em;       
             margin: 1.5em 0;     
         }
+
+        /* Bottom copyright notice centered in the middle column */
+        .copyright {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            font-weight: bold;
+            font-style: italic;
+            color: #000000;
+            white-space: nowrap;
+            z-index: 1000; /* Keeps it layered cleanly on top */
+        }
     </style>
 </head>
 <body>
@@ -139,8 +154,12 @@
 
             <p>În plus, nu poți face o lucrare doar cu AI. Lucrările vor avea probleme oricum pentru că nici o lucrare nu poate fi perfectă. Prin folosirea de AI se elimină toate aspectele umane și creative din aceste lucrări. LLM-urile îți răspund și acționează într-un mod robotic. Aceștia nu crează idei noi sau originale și nu inventează un lucru nemaivăzut. Ei folosesc informația deja prezentată și analizată și intuiesc ce răspuns este cel mai rezonabil din toate posibilitățile existente. Asta nu înseamnă ca nu poți să folosești AI în nici un caz. Dimpotrivă, înseamnă că în orice împrejurare când folosești AI trebuie să te asiguri că este onest și că informația prezentată nu are erori și este relevantă cu cercetările tale.</p>
 
+            <!-- Footer Copyright Notice placed INSIDE center-column -->
+            <div class="copyright">
+                Art &amp; Content © 2026 Victor Anton Munteanu Ciurușniuc
+            </div>
         </div>
-        
+
         <div class="side-column"></div>
     </div>
 
