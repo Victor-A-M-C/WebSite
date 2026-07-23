@@ -15,6 +15,7 @@
         body, html {
             height: 100%;
             font-family: Arial, sans-serif;
+            background-color: #DEDED2;
             overflow-x: hidden;
             overflow-y: auto; /* Moves the scrollbar to the far right of the screen */
         }
@@ -35,8 +36,8 @@
         .center-column {
             background-color: #DEDED2;
             padding: 20px;
-            padding-bottom: 3em; /* Adds exactly 2 rows of empty space at the very bottom of the text */
-            position: relative;  /* Allows absolute positioning relative to this column */
+            padding-bottom: 60px; /* Gives clearance above the copyright */
+            position: relative;  /* Anchors top labels and bottom copyright */
             
             /* Borders between the sections */
             border-left: 4px solid #86C0ED;
@@ -64,50 +65,61 @@
             margin-bottom: 2.5em;
         }
 
-        /* Positioned at the top left of the middle column, styled black and matches standard text size */
+        /* Positioned at the top left of the middle column */
         .top-left-label {
             position: absolute;
             top: 1em;
             left: 1.5em;
-            font-size: 1em;         /* Set to 1em to match the body text size exactly */
+            font-size: 1em;
             font-weight: normal;
-            color: #000000;         /* Solid black text */
+            color: #000000;
         }
 
-        /* Targets the 'Essays' link specifically to keep it black and non-underlined */
         .top-left-label a {
             color: #000000;
             text-decoration: none;
         }
 
-        /* Positioned at the top right of the middle column, styled black and matches standard text size */
+        /* Positioned at the top right of the middle column */
         .top-right-label {
             position: absolute;
             top: 1em;
             right: 1.5em;
-            font-size: 1em;         /* Set to 1em to match the body text size exactly */
+            font-size: 1em;
             font-weight: normal;
-            color: #000000;         /* Solid black text */
+            color: #000000;
         }
 
-        /* Targets the 'Romanian' link specifically to keep it black and non-underlined */
         .top-right-label a {
             color: #000000;
             text-decoration: none;
         }
 
-        /* Styling the paragraph text to align to the left side of the column */
+        /* Styling the paragraph text */
         .center-column p {
             text-align: left;
-            margin-bottom: 1em; /* Clean paragraph spacing */
+            margin-bottom: 1em;
         }
 
-        /* Centered formulas matching regular text style exactly */
+        /* Centered formulas */
         .formula {
             text-align: center;
             font-weight: normal; 
             font-size: 1em;       
             margin: 1.5em 0;     
+        }
+
+        /* Copyright notice pinned to the bottom of the middle column */
+        .copyright {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            font-weight: bold;
+            font-style: italic;
+            color: #000000;
+            white-space: nowrap;
         }
     </style>
     <!-- Loads MathJax plugin to elegantly compile LaTeX math notation inside the web page -->
@@ -125,7 +137,6 @@
 
             <h1>An Essay on the Equations of Morality</h1>
             <h2>By: Victor Anton Munteanu Ciurușniuc</h2>
-            <!-- Added duplicate line keeping matching small gray formatting style perfectly -->
             <h2 class="last-sub">6-24-2026</h2>
             
             <p>What is morality? If one were to look up the definition of morality, the first answer that would pop up would be: the principles and values that guide individuals in determining what is right or wrong, good or bad, and just or unjust. But what does that really mean? How do we know what is right or wrong, good or bad, just or unjust? To answer these questions, a long conversation is necessary, and it cannot be had in just one essay. However, in this essay, I will present two simple equations that are generally applicable, and can calculate whether an action is or is not moral, independent of what person or culture uses them.</p>
@@ -159,8 +170,13 @@
             <p>Another example is a man who murders his brother. In this case, the first equation will be 0.5+1=1.5 and thus we can conclude that the action may be immoral. Therefore we move on to the next equation where we will consider only one moral fact: “thou shalt not kill.” Using only this moral fact, the second equation will be 0/1=0. Due to the fact that 0 is less than 1, we can conclude that the action is immoral.</p>
             
             <p>Should one be aligned with the idea of moral isolationism or consider that it may take a great deal of time to understand a different person or culture's morality, one must simply consult these simple equations. Using even a basic knowledge of any culture or person, one will be able to answer whether any given act is moral or immoral from the observed perspective. After reaching the conclusion of whether an action is or is not moral, we must simply put in the effort to either accept the different norms or take action to change them.</p>
+
+            <!-- Copyright Notice placed INSIDE center-column -->
+            <div class="copyright">
+                Art &amp; Content © 2026 Victor Anton Munteanu Ciurușniuc
+            </div>
         </div>
-        
+
         <div class="side-column"></div>
     </div>
 
