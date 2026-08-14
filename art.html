@@ -128,6 +128,12 @@
             object-fit: contain; /* Prevents stretching if width/height aspect ratios clash */
             display: block;
             margin-bottom: 10px; /* Gap between image and its caption text */
+            cursor: pointer;    /* Indicates the image is clickable */
+            transition: opacity 0.2s ease;
+        }
+
+        .image-item img:hover {
+            opacity: 0.85; /* Subtle hover effect */
         }
 
         /* Individual text block description matching standard site copy size */
@@ -150,6 +156,39 @@
             font-style: italic;
             color: #000000;
             white-space: nowrap;
+        }
+
+        /* --- Fullscreen Lightbox Styles --- */
+        .lightbox-modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9); /* Dark backdrop */
+            justify-content: center;
+            align-items: center;
+            cursor: zoom-out;
+        }
+
+        .lightbox-modal img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
         }
     </style>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -175,7 +214,7 @@
                     <div>Oil on Canvas</div>
                     <div></div>
                     <div>2026</div>
-            <div class="image-row">
+                </div>
                 <div class="image-item">
                     <img src="piece6.jpg" alt="Artwork 6">
                     <div class="image-caption"><b>Caracatiță</b></div>
@@ -235,6 +274,40 @@
         
         <div class="side-column"></div>
     </div>
+
+    <!-- Fullscreen Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightboxImage" src="" alt="Enlarged Artwork">
+    </div>
+
+    <script>
+        // Get lightbox elements
+        const lightboxModal = document.getElementById('lightboxModal');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxClose = document.querySelector('.lightbox-close');
+
+        // Add click listener to all gallery images
+        document.querySelectorAll('.image-item img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImage.src = img.src;
+                lightboxImage.alt = img.alt;
+                lightboxModal.style.display = 'flex';
+            });
+        });
+
+        // Close modal when clicking anywhere on the overlay
+        lightboxModal.addEventListener('click', () => {
+            lightboxModal.style.display = 'none';
+        });
+
+        // Close modal when pressing the Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightboxModal.style.display === 'flex') {
+                lightboxModal.style.display = 'none';
+            }
+        });
+    </script>
 
 </body>
 </html>
