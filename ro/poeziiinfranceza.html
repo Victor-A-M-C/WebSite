@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor A.M.C - Poezii</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            /* Enables smooth transition when teleporting down the page */
+            scroll-behavior: smooth;
+        }
+
+        body, html {
+            min-height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #DEDED2;
+        }
+
+        /* 3-Column Layout: 20% | 60% | 20% extending full page height */
+        .container {
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            min-height: 100vh;
+            width: 100vw;
+        }
+
+        /* Side Columns */
+        .side {
+            background-color: #A7B670;
+        }
+
+        /* Middle Column with Borders - Converted to Flexbox for pristine spacing */
+        .middle {
+            background-color: #DEDED2;
+            border-left: 5px solid #A7B670;
+            border-right: 5px solid #A7B670;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-bottom: 80px;
+            position: relative; /* Allows absolute positioning for the top labels */
+        }
+
+        /* Top-left aligned label matching standard body text style */
+        .top-left-label {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 16px;
+            font-weight: normal;
+            color: #000000;
+        }
+
+        /* Targets the 'Acasă' link specifically to make it black and remove underline */
+        .top-left-label a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        /* Top-right aligned label matching standard body text style */
+        .top-right-label {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 16px;
+            font-weight: normal;
+            color: #000000;
+        }
+
+        /* Targets the 'English' language toggle link to keep it clean, black, and non-underlined */
+        .top-right-label a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        /* "Poems" title spacing - Updated margin-bottom to 60px (adds another extra row of spacing) */
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 60px; 
+            margin-bottom: 60px;
+        }
+
+        /* Grid wrapper for the columns at the top */
+        .content-area {
+            display: flex;
+            justify-content: space-around; 
+            padding: 0 20px;
+            height: 560px; 
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        /* Vertical column styling */
+        .text-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+            height: 100%;
+        }
+
+        /* Individual Block Styling turned into clean clickable links */
+        .block {
+            font-size: 16px;
+            color: #333;
+            font-weight: normal;
+            text-decoration: none; /* Removes default underline */
+            cursor: pointer;
+        }
+
+        .block:hover {
+            text-decoration: underline; /* Subtle feedback when hovering */
+        }
+
+        /* Spacing layout for the poem headers */
+        .section-header {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 60px; /* Space between the prior poem block and this header */
+            
+            /* Forces the browser to leave 20% of the viewport height above the text when teleported to */
+            scroll-margin-top: 20vh; 
+        }
+
+        /* Spacing layout for poem text - forces a precise 2-row gap (40px) under every header */
+        .section-text {
+            font-size: 16px;
+            color: #333;
+            font-weight: normal;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px; /* EQUIDISTANT 2-ROW GAP */
+        }
+
+        /* Bottom copyright notice centered in the middle column */
+        .copyright {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            font-weight: normal;
+            font-style: italic;
+            color: #000000;
+            white-space: nowrap;
+            z-index: 1000; /* Keeps it layered cleanly on top */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="side"></div>
+
+        <div class="middle">
+            <!-- Top navigational cross-language links -->
+            <div class="top-left-label"><a href="/ro/poezii">Poezii</a></div>
+            <div class="top-right-label"><a href="../poemsinfrench">English</a></div>
+
+            <div class="title">Poezii în Franceză</div>
+            
+            <div class="content-area">
+                <div class="text-column">
+                    <a href="#" class="block"></a>
+                    <a href="#left8" class="block"></a>
+                    <a href="#left9" class="block"></a>
+                </div>
+
+                <div class="text-column">
+                    <a href="#lamer" class="block">La Mer</a>
+                    <a href="#center8" class="block"></a>
+                    <a href="#center9" class="block"></a>
+                </div>
+
+                <div class="text-column">
+                    <a href="#" class="block"></a>
+                    <a href="#right8" class="block"></a>
+                    <a href="#right9" class="block"></a>
+                </div>
+            </div>
+
+            <!-- Poem Sections with dynamic identical spacing -->
+
+            <div id="lamer" class="section-header">La Mer</div>
+                <p><i>8-11-2026</i></p>
+            <div class="section-text">
+                <div>Le bruit de la mer</div>
+                <div>Le gazouillis des oiseaux</div>
+                <div>Noyer mes tympans</div>
+            </div>
+
+            <div id="center7" class="section-header"></div>
+            <div class="section-text">
+                <div></div>
+                <div></div>
+            </div>
+
+            <div id="right7" class="section-header"></div>
+            <div class="section-text">
+                <div></div>
+                <div></div>
+            </div>
+
+            <div id="left8" class="section-header"></div>
+            <div class="section-text">
+                <div></div>
+                <div></div>
+            </div>
+
+            <div id="center8" class="section-header"></div>
+            <div class="section-text">
+                <div></div>
+                <div></div>
+            </div>
+
+            <div id="right8" class="section-header"></div>
+            <div class="section-text">
+                <div></div>
+                <div></div>
+            </div>
+
+            <div id="left9" class="section-header"></div>
+            <div class="section-text">
+                <div></div>
+                <div></div>
+            </div>
+
+            <div id="center9" class="section-header"></div>
+            <div class="section-text">
+                <div></div>
+                <div></div>
+            </div>
+
+            <div id="right9" class="section-header"></div>
+            <div class="section-text">
+                <div></div>
+                <div></div>
+            </div>
+
+            <!-- Footer Copyright Notice -->
+            <div class="copyright">
+                Artă &amp; Conținut © 2026 Victor Anton Munteanu Ciurușniuc
+            </div>
+
+        </div>
+
+        <div class="side"></div>
+    </div>
+
+</body>
+</html>

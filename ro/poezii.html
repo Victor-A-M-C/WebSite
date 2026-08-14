@@ -40,10 +40,10 @@
             align-items: center;
             text-align: center;
             padding-bottom: 80px;
-            position: relative; /* Allows absolute positioning for the top labels */
+            position: relative; /* Allows absolute positioning for top labels */
         }
 
-        /* Top-left aligned label matching standard body text style */
+        /* Top-left aligned label */
         .top-left-label {
             position: absolute;
             top: 20px;
@@ -53,13 +53,12 @@
             color: #000000;
         }
 
-        /* Targets the 'Home' link specifically to keep it clean, black, and non-underlined */
         .top-left-label a {
             color: #000000;
             text-decoration: none;
         }
 
-        /* Top-right aligned label matching standard body text style */
+        /* Top-right aligned label */
         .top-right-label {
             position: absolute;
             top: 20px;
@@ -69,7 +68,6 @@
             color: #000000;
         }
 
-        /* Targets the 'Română' link specifically to keep it clean, black, and non-underlined */
         .top-right-label a {
             color: #000000;
             text-decoration: none;
@@ -83,23 +81,23 @@
             margin-bottom: 60px;
         }
 
-        /* Grid wrapper for the 2 columns in the middle content area */
+        /* Content wrapper for 3 columns in the middle layout */
         .content-area {
             display: flex;
-            justify-content: space-around; 
-            padding: 0 40px;
+            justify-content: space-between; 
+            padding: 0 30px;
             height: 560px; 
             width: 100%;
             margin-bottom: 40px;
         }
 
-        /* Vertical column styling for 2 columns */
+        /* Vertical column styling for 3 columns */
         .text-column {
             display: flex;
             flex-direction: column;
             justify-content: space-between; 
             height: 100%;
-            width: 45%; /* Gives structure and balance across 2 columns */
+            width: 30%; /* Balanced width for 3 columns */
         }
 
         /* Individual Block Styling */
@@ -109,13 +107,13 @@
             font-weight: normal;
         }
 
-        /* Ensures essay links blend perfectly with standard unlinked blocks */
+        /* Column links formatting */
         .text-column a {
             color: #333333;
             text-decoration: none;
         }
 
-        /* Bottom copyright notice centered in the middle column */
+        /* Bottom copyright notice centered */
         .copyright {
             position: absolute;
             bottom: 20px;
@@ -140,10 +138,14 @@
 
             <div class="title">Poezii</div>
             
-            <!-- 2-Column Content Area -->
+            <!-- 3-Column Content Area -->
             <div class="content-area">
                 <div class="text-column">
                     <span class="block"><a href="poeziiinengleza">Poezii în Engleză</a></span>
+                </div>
+
+                <div class="text-column">
+                    <span class="block"><a href="poeziiinfranceza">Poezii în Franceză</a></span>
                 </div>
 
                 <div class="text-column">
