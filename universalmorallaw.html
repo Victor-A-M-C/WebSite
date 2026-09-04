@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor A.M.C</title>
+    <style>
+        /* Reset margins and paddings to prevent gaps */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #DEDED2;
+            overflow-x: hidden;
+            overflow-y: auto; /* Moves the scrollbar to the far right of the screen */
+        }
+
+        /* Use CSS Grid to perfectly slice the screen into 20% / 60% / 20% */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            min-height: 100vh; /* Keeps columns full height even if content is short */
+        }
+
+        /* Left and Right columns */
+        .side-column {
+            background-color: #86C0ED;
+        }
+
+        /* Center column with borders */
+        .center-column {
+            background-color: #DEDED2;
+            padding: 20px;
+            padding-bottom: 60px; /* Gives clearance above the copyright */
+            position: relative;  /* Allows absolute positioning relative to this column */
+            
+            /* Borders between the sections */
+            border-left: 4px solid #86C0ED;
+            border-right: 4px solid #86C0ED;
+        }
+
+        /* Styling the main header to stay centered and pushed down */
+        .center-column h1 {
+            text-align: center;
+            margin-top: 1em; 
+            margin-bottom: 0.2em; /* Small gap between main header and small text */
+        }
+
+        /* Styling the small header text beneath the main title */
+        .center-column h2 {
+            text-align: center;
+            font-size: 0.9em;       /* Makes the text small */
+            font-weight: normal;    /* Removes heavy bolding */
+            color: #555555;         /* Gives it a subtle grey color */
+            margin-bottom: 0.2em;   /* Pulls the duplicated line tightly underneath */
+        }
+
+        /* Creates the empty row/gap before the main text starts on the final subtitle row */
+        .center-column h2.last-sub {
+            margin-bottom: 2.5em;
+        }
+
+        /* Positioned at the top left of the middle column, styled black and matches standard text size */
+        .top-left-label {
+            position: absolute;
+            top: 1em;
+            left: 1.5em;
+            font-size: 1em;         /* Matches the body text size exactly */
+            font-weight: normal;
+            color: #000000;         /* Solid black text */
+        }
+
+        /* Keeps the 'Eseuri' link clean, black, and non-underlined */
+        .top-left-label a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        /* Positioned at the top right of the middle column, styled black and matches standard text size */
+        .top-right-label {
+            position: absolute;
+            top: 1em;
+            right: 1.5em;
+            font-size: 1em;         /* Matches the body text size exactly */
+            font-weight: normal;
+            color: #000000;         /* Solid black text */
+        }
+
+        /* Keeps the 'English' link clean, black, and non-underlined */
+        .top-right-label a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        /* Styling the paragraph text to align to the left side of the column */
+        .center-column p {
+            text-align: left;
+            margin-bottom: 1em; /* Clean paragraph spacing */
+        }
+
+        /* Centered formulas matching regular text style exactly */
+        .formula {
+            text-align: center;
+            font-weight: normal; 
+            font-size: 1em;       
+            margin: 1.5em 0;     
+        }
+
+        /* Centered 2x6 Table Styling */
+        .custom-table {
+            width: 80%;
+            margin: 1.5em auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        .custom-table th, .custom-table td {
+            border: 1px solid #86C0ED;
+            padding: 8px 12px;
+            font-size: 0.95em;
+        }
+
+        .custom-table th {
+            background-color: #86C0ED;
+            color: #000000;
+        }
+
+        /* Centered Numbered List Styling */
+        .centered-list {
+            margin: 1.5em auto;
+            text-align: center;
+            list-style-position: inside;
+            padding-left: 0;
+        }
+
+        .centered-list li {
+            margin-bottom: 0.5em;
+            font-size: 1em;
+            color: #000000;
+        }
+
+        /* Bottom copyright notice centered in the middle column */
+        .copyright {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            font-weight: normal;
+            font-style: italic;
+            color: #000000;
+            white-space: nowrap;
+            z-index: 1000; /* Keeps it layered cleanly on top */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="side-column"></div>
+        
+        <div class="center-column">
+            <div class="top-left-label"><a href="essays">Essays</a></div>
+            <div class="top-right-label"><a href="ro/legeamoralauniversală">Română</a></div>
+
+            <h1>Universal Moral Law</h1>
+            <h2>By: Victor Anton Munteanu Ciurușniuc</h2>
+            <h2 class="last-sub">9-3-2026</h2>
+            
+            <p>A universal moral law is required in order to create a just, free, and productive society. In the following paragraphs I will outline my own universal moral law, which I believe best accomplishes the most important goals of humanity in the most efficient manner.</p>
+
+            <p>When discussing a universal moral law, one must first state its definition, its goals, and its foundation, after which, a conversation regarding its actual systems may take place. A universal moral law is defined as a principle that can apply to all rational beings everywhere, no matter the culture, race, gender, time, or place. Without a universal moral law, the world is a confusing, frantic place where people’s understanding of morality is ambiguous and interactions fall victim to misunderstanding. However, with a universal moral law, the world becomes ordered, moral, stable, and understandable.</p>
+
+            <p>Clearly listed goals and aspirations are necessary in order to properly form a foundation and system that accomplish the stated goals in the most efficient manner. I believe that the most optimal goals for humanity are: the advancement of the human race, the maintenance and preservation of the natural world, and the demonstration of respect for creation. The advancement of the human race can be defined as the furtherance of the human blood line and the preservation and continuation of the pursuit of knowledge, understanding, and beauty. The maintenance and preservation of the natural world can be defined as the protection of ecosystems and the entities that encompass them, ranging from endangered animals to rare and special geodes. The demonstration of respect for creation encompasses the largest variety of things. It isn’t just showing appreciation through art or architecture, but also looking internally by considering the way that our actions may affect any and every other thing that makes up creation.</p>
+
+            <p>With these three stated goals, we are able to build a foundation which ought to be understandable to everyone and easily digestible on top of which we will create a system of rules. In my experience and the experience of many others, the best foundations are based on virtue. Having misaligned virtues opens the door to misunderstandings due to the fact that virtue is the basis for a person’s morality. For example, if one person values honesty and another person doesn’t, they will perpetually face a misunderstanding of why lying is wrong. Therefore, we need a set of virtues that allows us to accomplish the listed goals in the most efficient manner.</p>
+
+            <p>The virtues that I have chosen for this foundation are: courage, honesty, generosity, fairness, loyalty, civility, and compassion. Courage is necessary because if one is too cowardly, they will never be able to do the right thing. Honesty is required as without honesty society breaks down: if you don’t know who you can trust, you cannot form lasting partnerships. Generosity is essential because without it, the less fortunate suffer. Fairness is important because to be unfair would be to prey on the weak, which is a form of cruelty. Loyalty is obligatory because without it, relationships become transactional and open the door to dishonesty. Civility allows us to work hand in hand with those who are foreign to us, which is a requisite for progress. Compassion is vital in order to be sure that the less fortunate do not suffer and cruelty does not run rampant.</p>
+
+            <p>Some might question why other virtues are not on this list, for example: love. Although virtues like love are very respectable and important, they are not required to accomplish the listed goals or to be a moral person. If a person is lacking in other virtues, but still demonstrates the aforementioned virtues, they can still lead a moral life. </p>
+
+            <p>A counter to the virtue foundation is that some people simply do not embody these virtues and therefore cannot adhere. However, the common conception is that one learns what a virtue’s meaning is by doing it. Through doing it consciously, one embodies the virtue and begins to do it subconsciously. Therefore, the only way to embody these virtues is to consciously make sure that you are acting upon them until they become second nature.</p>
+
+            <p>Now, with this foundation and these goals established, we can make a system. As referenced in my essay on the equations of morality, I believe that there should be two parts to a moral system: hierarchical levels of impartiality to which rules apply and a list of rules to apply to them. Some rules should be universal and affect every level, however most should be more malleable in order to facilitate nuance.</p>
+
+            <p>At the highest level of the hierarchical levels of impartiality there are: humanity, nature, companions, and the endangered. The second level contains artifacts, the third: animals, items and beasts on the fourth, plant life on the fifth, and objects on the sixth. Therefore, the components of these hierarchical levels of impartiality appear this way:</p>
+
+
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th>Levels of Hierarchy</th>
+                        <th>Components</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Level 1</td>
+                        <td>Humanity, Nature, Companions, The Endangered</td>
+                    </tr>
+                    <tr>
+                        <td>Level 2</td>
+                        <td>Artifacts</td>
+                    </tr>
+                    <tr>
+                        <td>Level 3</td>
+                        <td>Animals</td>
+                    </tr>
+                    <tr>
+                        <td>Level 4</td>
+                        <td>Items, Beasts</td>
+                    </tr>
+                    <tr>
+                        <td>Level 5</td>
+                        <td>Plant Life</td>
+                    </tr>
+                    <tr>
+                        <td>Level 6</td>
+                        <td>Objects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Of course, upon first glance, these levels may spark some animosity or misunderstanding. However, once broken down, they become more understandable. Fauna by and large is broken down into five different categories: humanity, companions, the endangered, animals, and beasts. Humanity is in our case those who make up the “homo sapien” species, however in the event of the introduction of a new sentient, rational, and reasonable species, it can be expanded to include them too. Companions are domesticated fauna that, although not human, can essentially function as family members for their caretaker(s). Although not all domesticated fauna fit into this category, those who function as family members do. The endangered refers to fauna and flora that are in danger of extinction and will disappear without proper help and attention. Animals are the great majority of other fauna, any creature that is not a human, companion, or endangered and does not pose a threat to an entity of a higher hierarchical level. Finally, beasts are fauna that are attempting or committing the action of hurting, killing, or otherwise damaging an entity of equal or higher hierarchical level. This term applies generally to any fauna including humans, as a man who is willing to kill another man on a whim is no better than a bear who attacks a hiker in the woods.</p>
+
+            <p>Nature is the natural world or an area’s environment, all that exists without human creation. The desert must be protected as much as the forest, because they are both unique ecosystems. Space is the same way, although slightly more tricky. The harvesting of an asteroid for raw material or the construction of colonies on Mars is fair game as there is no ecosystem to protect. This is due to the fact that these are dead areas with no organic matter. However, we must be sure to not become overzealous, it is important to still respect these newly accessible parts of creation. Although an asteroid harvested for its raw material will typically not be missed, the destruction and/or exploitation of a planet simply for the advancement of humanity is not just.</p>
+
+            <p>Artifacts are non-living entities that are made, changed, or used by fauna and hold some sort of historical, cultural, or scientific importance. For example, a tree that was planted around 288 BC may be a part of flora, but it is also an artifact due to its cultural and historical importance. At the same time, a coveted painting is also an artifact due to its cultural significance. This does not mean that every painting is an artifact nor is every book, vehicle, or building. However, those that are adored by many or appreciated and recognized by educated institutions are and should be.</p>
+
+            <p>Items are non living entities that are intricate and/or valuable. This value does not necessarily need to be monetary, it can be emotional too. A high-end car, a building, or a home may be considered an item in the same way that the ashes of one's mother or the final gift from a loved one might be.</p>
+
+            <p>Plant life is the great majority of flora. Examples of plant life are: grass, shrubs, and trees that make up and are owned by nature or are part of someone's home. However, this component is only made up of plant life that is not part of a higher hierarchical level.</p>
+
+            <p>On the lowest hierarchical level we have objects, which are any non-living entity of low value or importance. For example, a common stone or mineral, old common shoes, or even an old broken-down car.</p>
+
+            <p>With these levels of hierarchy established, we must create a set of rules to be followed. They must complement these hierarchical levels and dictate what to and what not to do. Moreover, they must also adhere to the aforementioned virtues and accomplish the listed goals.</p>
+
+            <p>This set of rules is comprised of:</p>
+
+            <ol class="centered-list">
+                <li>Never murder an entity of equal or higher hierarchical level unless absolutely necessary for survival.</li>
+                <li>Never rape.</li>
+                <li>Never enslave an entity of equal or higher hierarchical level.</li>
+                <li>Never detain an entity of equal or higher hierarchical level.</li>
+                <li>Never punish one for the acts of another.</li>
+                <li>Never commit treachery.</li>
+                <li>Never steal from an entity of equal or higher hierarchical level unless absolutely vital for survival.</li>
+                <li>Never lie unless absolutely necessary for the survival of you or another entity of level four or higher.</li>
+                <li>One must be generous.</li>
+                <li>One must care for their child to the best of their ability.</li>
+                <li>One should take care of those who took care of them.</li>
+            </ol>
+
+            <p>Although some of these rules may seem somewhat straight forward, to some they may require some clarification. For example, enslaving an entity refers to the concept of forcing another to work for little to no compensation against their will. Detaining an entity is the idea of holding someone in containment against their will.</p>
+
+            <p>Punishing one for the acts of another is generally incorrect, however when punishing someone for the actions of an entity in their care, it can be allowed. In this case, the entity in their care cannot be fully responsible for their actions due to a lack of understanding or rationality. You are not punishing them for the actions of the entity, you are punishing them for their negligence of it.</p>
+
+            <p>Treachery refers not just to when one generally betrays another, but rather when one builds a relationship with the sole intent of betraying or tricking another.</p>
+
+            <p>Stealing is more tricky as it can affect different components in different ways. For example, stealing a mere object and replacing it with an object of higher or equal value might not be considered stealing at all. On the other hand, stealing an item and replacing it with another item of equal value may be considered stealing as one can never replace the emotional attachment that said item holds. On top of this, stealing from nature is not merely the stealing of one specific plant, but rather the theft of the natural capital of a part of nature. For example, if one were to cut down an entire forest in order to build a city with no plants, this would be a form of theft from nature. However, in this same scenario, if this city is constructed to have many trees by the sidewalks and flora growing on rooftops or terraces, it could potentially be okay. Although, consideration must still be given to whether or not the species that lived there could still survive either in the same place or elsewhere, and given that this wasn’t the only biome of its type left. On top of this, one cannot steal artifacts, companions, items, or any other owned entity, as although they are entities on these levels, they are still the property of someone or something.</p>
+
+            <p>Lying is typically wrong, however in the rare case that you are lying to allow the survival of something of level 4 or higher, it is not immoral. This is due to the fact that these components are typically highly valuable, unique, or irreplaceable.</p>
+
+            <p>Generosity is not only done through capital, it can be accomplished through giving someone your time, lending an ear, or even giving someone your seat on the bus. Although many believe generosity starts and ends at donation to charity, this is not the case. Donation to charity by the extremely fortunate, although somewhat generous, is not necessarily more generous than the time that a less fortunate person gives a friend when sitting and listening to the problems that they’re facing.</p>
+
+            <p>Caring for one’s child is one of the most important feats that a person can accomplish. However, it is true that there are some who are unable to do so in any way, shape or form. Due to this, we have institutions that attempt to care for the child and find them a suitable caretaker. However, even the action of turning the child over to an institution is a form of care. The action of attempting to be a more stable or virtuous person in order to be a positive part of said child’s life is a form of care as well.</p>
+
+            <p>Taking care of those who take care of you is a broad statement. This can vary from having your parents live with you at old age to buying your starving friend a meal when they have no money. People take care of us in many ways: by providing friendship, love, or a shoulder to cry on. We ought to repay that kindness by offering it back to them and offering more in order to facilitate the same care in the future and to reward the care shown in the past.</p>
+
+            <p>This virtue based universal moral law is composed of hierarchical levels and a list of rules that applies to them. It allows us to have a better understanding of one another and a clear perception of why the rules function as they do. The point of the levels of hierarchy is to demonstrate a clear visual of what is most and what is least important in the grand scheme of things. Although one can be moral simply by following these rules and performing these virtues, one also has the potential to be even more virtuous by attempting to demonstrate other positive virtues like love or creativity.</p>
+
+            <div class="copyright">
+                Art &amp; Content © 2026 Victor Anton Munteanu Ciurușniuc
+            </div>
+        </div>
+
+        <div class="side-column"></div>
+    </div>
+
+</body>
+</html>
