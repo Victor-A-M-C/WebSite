@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor A.M.C</title>
+    <style>
+        /* Reset margins and paddings to prevent gaps */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #DEDED2;
+            overflow-x: hidden;
+            overflow-y: auto; /* Moves the scrollbar to the far right of the screen */
+        }
+
+        /* Use CSS Grid to perfectly slice the screen into 20% / 60% / 20% */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            min-height: 100vh; /* Keeps columns full height even if content is short */
+        }
+
+        /* Left and Right columns */
+        .side-column {
+            background-color: #86C0ED;
+        }
+
+        /* Center column with borders */
+        .center-column {
+            background-color: #DEDED2;
+            padding: 20px;
+            padding-bottom: 60px; /* Gives clearance above the copyright */
+            position: relative;  /* Allows absolute positioning relative to this column */
+            
+            /* Borders between the sections */
+            border-left: 4px solid #86C0ED;
+            border-right: 4px solid #86C0ED;
+        }
+
+        /* Styling the main header to stay centered and pushed down */
+        .center-column h1 {
+            text-align: center;
+            margin-top: 1em; 
+            margin-bottom: 0.2em; /* Small gap between main header and small text */
+        }
+
+        /* Styling the small header text beneath the main title */
+        .center-column h2 {
+            text-align: center;
+            font-size: 0.9em;       /* Makes the text small */
+            font-weight: normal;    /* Removes heavy bolding */
+            color: #555555;         /* Gives it a subtle grey color */
+            margin-bottom: 0.2em;   /* Pulls the duplicated line tightly underneath */
+        }
+
+        /* Creates the empty row/gap before the main text starts on the final subtitle row */
+        .center-column h2.last-sub {
+            margin-bottom: 2.5em;
+        }
+
+        /* Positioned at the top left of the middle column, styled black and matches standard text size */
+        .top-left-label {
+            position: absolute;
+            top: 1em;
+            left: 1.5em;
+            font-size: 1em;         /* Matches the body text size exactly */
+            font-weight: normal;
+            color: #000000;         /* Solid black text */
+        }
+
+        /* Keeps the 'Eseuri' link clean, black, and non-underlined */
+        .top-left-label a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        /* Positioned at the top right of the middle column, styled black and matches standard text size */
+        .top-right-label {
+            position: absolute;
+            top: 1em;
+            right: 1.5em;
+            font-size: 1em;         /* Matches the body text size exactly */
+            font-weight: normal;
+            color: #000000;         /* Solid black text */
+        }
+
+        /* Keeps the 'English' link clean, black, and non-underlined */
+        .top-right-label a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        /* Styling the paragraph text to align to the left side of the column */
+        .center-column p {
+            text-align: left;
+            margin-bottom: 1em; /* Clean paragraph spacing */
+        }
+
+        /* Centered formulas matching regular text style exactly */
+        .formula {
+            text-align: center;
+            font-weight: normal; 
+            font-size: 1em;       
+            margin: 1.5em 0;     
+        }
+
+        /* Centered 2x6 Table Styling */
+        .custom-table {
+            width: 80%;
+            margin: 1.5em auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        .custom-table th, .custom-table td {
+            border: 1px solid #86C0ED;
+            padding: 8px 12px;
+            font-size: 0.95em;
+        }
+
+        .custom-table th {
+            background-color: #86C0ED;
+            color: #000000;
+        }
+
+        /* Centered Numbered List Styling */
+        .centered-list {
+            margin: 1.5em auto;
+            text-align: center;
+            list-style-position: inside;
+            padding-left: 0;
+        }
+
+        .centered-list li {
+            margin-bottom: 0.5em;
+            font-size: 1em;
+            color: #000000;
+        }
+
+        /* Bottom copyright notice centered in the middle column */
+        .copyright {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            font-weight: normal;
+            font-style: italic;
+            color: #000000;
+            white-space: nowrap;
+            z-index: 1000; /* Keeps it layered cleanly on top */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="side-column"></div>
+        
+        <div class="center-column">
+            <div class="top-left-label"><a href="eseuri">Eseuri</a></div>
+            <div class="top-right-label"><a href="../universalmorallaw">English</a></div>
+
+            <h1>Legea Morală Universală</h1>
+            <h2>De: Victor Anton Munteanu Ciurușniuc</h2>
+            <h2 class="last-sub">3-9-2026</h2>
+            
+            <p>O lege morală universală este necesară pentru a crea o societate justă, liberă și productivă. În următoarele paragrafe, voi dezvolta o lege morală universală proprie, care să realizeze cele mai importante scopuri ale umanității în maniera cea mai eficientă.</p>
+
+            <p>Discuția despre legea morală universală are la bază în primul rând definiția, scopul și fundația acestei legi, după care o conversație despre sistemele aferente poate fi abordată. O lege morală universală este definită ca un principiu care poate fi aplicat la toate ființele raționale de pretutindeni indiferent de cultură, rasă, sex, timp sau locație. Fără o lege morală universală lumea ar fi haotică și frenetică, percepția moralității ar fi ambiguă, iar interacțiunile între oameni ar pica victime neînțelegerii. Însă având o lege morală universală, lumea devine ordonată, morală, stabilă și inteligibilă.</p>
+
+            <p>Scopurile și aspirațiile clare sunt necesare pentru a forma o fundație și un sistem adecvate care să îndeplinească scopurile alese în maniera cea mai eficientă. Cele mai optime scopuri ale umanității sunt: progresul rasei umane, susținerea și prezervarea naturii și demonstrația respectului față de creație. Progresul rasei umane poate fi definit ca o susținere a liniei genetice și ca o prezervare și continuare a dobândirii de cunoștințe, înțelegere și frumusețe. Susținerea și prezervarea naturii poate fi definită ca protecția naturii și a entităților care îi aparțin, variind de la animale pe cale de dispariție până la geode rare și speciale. Demonstrația respectului față de creație cuprinde cea mai largă varietate de lucruri. Aceasta nu înseamnă doar aprecierea prin artă sau arhitectură dar și prin analiza intrinsecă care consideră modul în care acțiunile noastre afectează alte lucruri de asemenea parte de creație.</p>
+
+            <p>Cu aceste trei scopuri putem construi o fundație care să fie înțeleasă de toată lumea și ușor de acceptat peste care vom crea un sistem de reguli. În experiența mea și a altora, cele mai bune fundații sunt bazate pe virtute. Având virtuți nealiniate crează neînțelegeri datorită faptului că virtutea este baza moralității unei persoane. De exemplu, atunci când o persoană valorează onestitatea și o alta nu o apreciază, ei vor fi într-o neînțelegere perpetuă în legătură cu idea că minciuna este inadecvată. Prin urmare avem nevoie de un set de virtuți care să ne permită realizarea scopurilor noastre în maniera cea mai eficientă.</p>
+
+            <p>Virtuțile alese pentru această fundație sunt: curajul, onestitatea, generozitatea, echitatea, loialitatea, civilitatea și compasiunea. Curajul este necesar deoarece o persoană care este lașă, nu va putea niciodată să facă ceea ce trebuie. Onestitatea este de folos fiindcă fără onestitate societatea s-ar destrăma: dacă nu știi în cine să ai încredere nu poți forma relații de lungă durată. Generozitatea este esențială deoarece fără ea cei mai puțin avantajați ar suferi. Echitatea este importantă deoarece fiind nedrept ar însemna să prădezi pe cei slabi care este o formă de cruzime. Loialitatea este obligatorie fiindcă fără ea, relațiile ar deveni tranzacționale și te-ar putea expune la un comportament necinstit. Civilitatea ne ajută să lucrăm cot la cot cu cei care ne sunt străini iar aceasta este o dovadă de progres. Compasiunea este vitală pentru a fi siguri că cei mai dezavantajați nu suferă și cruzimea nu este preponderentă.</p>
+
+            <p>Unii s-ar întreba de ce unele virtuți nu fac parte din lista de mai sus. Cu toate că alte virtuți cum ar fi dragostea sunt foarte respectabile și importante, ele nu sunt necesare pentru a realiza scopurile alese sau pentru a fi o persoană morală. Dacă unei persoane îi lipsesc alte virtuți însă demonstrează virtuțile menționate anterior ei pot duce o viață morală.</p>
+
+            <p>Un contraexemplu la fundația virtuților este faptul că pentru unii oameni pur și simplu virtuțile nu sunt parte intrinsecă și de aceea ei nu pot adera la ele. Însă concepția comună este că o persoană învață ce înseamnă o virtute prin a o practica. Prin folosirea conștientă a virtuților, acestea vor deveni o parte intrinsecă a unei persoane care după aceea va începe să le practice inconștient. Prin urmare, singura modalitate de a face aceste virtuți o parte intrinsecă de sine este să te asiguri că le practici până când devin o a doua natură.</p>
+
+            <p>Cu această fundație și aceste scopuri stabilite, putem crea un sistem. În acord cu eseul meu despre ecuațiile moralității, sunt convins că un sistem moral necesită două părți: nivelurile ierarhice de imparțialitate la care se aplică un set de reguli precum și o listă de reguli care vor fi aplicate la aceste nivele ierarhice. Unele reguli vor fi universale și vor afecta toate nivelurile însă majoritatea vor fi maleabile pentru a facilita situațiile cu nuanță.</p>
+
+            <p>Pe poziția cea mai înaltă a nivelurilor ierarhice de imparțialitate se situează umanitatea, natura, companionii și speciile pe cale de dispariție. Al doilea nivel conține artefactele, al  treilea animalele, lucrurile și bestiile fac parte din al patrulea nivel, plantele din al cincilea și obiectele din al șaselea. Prin urmare componentele acestor niveluri ierarhice de imparțialitate sunt grupate în acest mod:</p>
+
+
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th>Nivele Ierarhice</th>
+                        <th>Componente</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nivel 1</td>
+                        <td>Umanitate, Natură, Companioni, Specii pe cale de dispariție</td>
+                    </tr>
+                    <tr>
+                        <td>Nivel 2</td>
+                        <td>Artefacte</td>
+                    </tr>
+                    <tr>
+                        <td>Nivel 3</td>
+                        <td>Animale</td>
+                    </tr>
+                    <tr>
+                        <td>Nivel 4</td>
+                        <td>Lucruri, Bestii</td>
+                    </tr>
+                    <tr>
+                        <td>Nivel 5</td>
+                        <td>Plante</td>
+                    </tr>
+                    <tr>
+                        <td>Nivel 6</td>
+                        <td>Obiecte</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Bineînțeles că la prima vedere aceste niveluri pot crea animozitate sau neînțelegere. Însă atunci când sunt însoțite de o explicație ele devin mai inteligibile. Fauna in general se împarte in cinci categorii diferite: umanitatea, companionii, speciile pe cale de dispariție, animalele și bestiile. Umanitatea în cazul nostru se referă la specia “homo sapien”. Însă în cazul introducerii unei noi specii conștiente, raționale și rezonabile, această componentă poate fi extinsă să o includă și pe aceasta. Companionii sunt faună domestică deși nu de natură umană dar care funcționează în esență ca un membru al familiei căreia îi aparțin. Deși nu toată fauna domestică face parte din această componentă, cei care funcționează ca membri ai familiei sunt considerați. Speciile pe cale de dispariție se referă la fauna și flora care sunt în pericol de extincție și vor dispărea fără ajutor și atenție adecvate. Animalele reprezintă marea majoritate a faunei, incluzând orice creatură care nu este umană, companion sau specie pe cale de dispariție și care nu pozează un pericol la adresa unei entități dintr-un nivel ierarhic superior. În final bestiile sunt faună care încearcă sau comit acțiunea de a răni, ucide sau a strica o entitate de pe un nivel ierarhic de valoare echivalentă sau superioară. Acest termen se referă în general la oricare faună incluzând rasa umană deoarece o persoană care ar fi de acord să ucidă o alta din impuls nu este superioară față de un urs care atacă un drumeț în pădure.</p>
+
+            <p>Natura este lumea naturală sau mediul înconjurător dintr-o zonă, tot ceea ce există fără a fi creat de om. Deșertul trebuie protejat la fel de mult ca și pădurea deoarece ambele sunt ecosisteme unice. Spațiul este similar însă puțin mai complicat. Recoltarea unui asteroid pentru materiale prime sau construcția unei colonii pe Marte pot fi considerate legitime fiindcă nu includ ecosisteme care trebuiesc protejate. Acest lucru se întâmplă datorită faptului că zonele menționate anterior sunt locuri moarte care nu conțin materie organică. Însă trebuie să ne asigurăm că nu devenim excesiv de zeloși fiind important să respectăm aceste nou accesibile zone ale creației. Deși unui asteroid recoltat pentru materiale prime nu îi vom simți în general lipsa, distrugerea și/sau exploatarea unei planete pur și simplu pentru avansarea umanității nu este justă.</p>
+
+            <p>Artefactele sunt entități fără viață care sunt create, schimbate, sau folosite de faună și care poartă o semnificație istorică, culturală sau de importanță științifică. De exemplu, un pom care a fost plantat în jurul anului 288 î.Hr. poate face parte de floră, dar este și un artefact datorită importanței culturale și istorice. În același timp o pictură celebră este de asemenea un artefact datorită semnificației culturale. Acest lucru nu înseamnă că orice pictură este un artefact în același mod în care nu orice carte, vehicul sau clădire sunt artefacte. Însă acele obiecte care sunt adorate sau apreciate și recunoscute de instituții educative sunt și ar trebuie să fie clasificate în acest mod.</p>
+
+            <p>Lucrurile sunt entități fără viață care sunt complicate și/sau valoroase. Această valoare nu este neapărat de natură monetară, poate fi și de natură emoțională. O mașină de lux, o clădire, sau o casă pot fi considerate lucruri în același fel în care sunt considerate ca lucruri cenușa funerară a unei mame sau darul final a unui iubit.</p>
+
+            <p>Plantele reprezintă majoritatea florei. Exemple de plante sunt: iarba, arbuștii și pomii care fac parte și sunt deținuți de natură sau aparțin proprietății unei persoane. Însă această componentă cuprinde doar plantele care nu fac parte dintr-un nivel ierarhic superior.</p>
+
+            <p>La nivelul ierarhic cel mai de jos se află obiectele care sunt entități fără viață cu valoare sau importanță mică. De exemplu, o piatră sau un mineral ordinare, pantofi vechi și comuni chiar și o mașină stricată sunt considerate obiecte.</p>
+
+            <p>Cu aceste nivele ierarhice stabilite este necesar să creăm un set de reguli care trebuiesc urmărite. Aceste reguli trebuie să completeze nivelurile ierarhice și să dicteze ce să faci și ce să nu faci. Mai mult de atât, regulile trebuie să adere la virtuțile menționate anterior și să îndeplinească scopurile referite mai sus.</p>
+
+            <p>Acest set de reguli este format din următoarele:</p>
+
+            <ol class="centered-list">
+                <li>Nu ucide o entitate de nivel ierarhic echivalent sau superior decât dacă este absolut necesar supraviețuirii.</li>
+                <li>Nu viola.</li>
+                <li>Nu înrobi o entitate de nivel ierarhic echivalent sau superior.</li>
+                <li>Nu reține o entitate de nivel ierarhic echivalent sau superior.</li>
+                <li>Nu pedepsi o entitate pentru acțiunile alteia.</li>
+                <li>Nu comite perfidie.</li>
+                <li>Nu fura de la o entitate de nivel ierarhic echivalent sau superior decât dacă este absolut necesar supraviețuirii.</li>
+                <li>Nu strica proprietatea unei entități de nivel ierarhic echivalent sau superior decât dacă este absolut necesar supraviețuirii.</li>
+                <li>Nu minți decât dacă este absolut necesar supraviețuirii personale sau a unei entități de pe nivelul 4 sau superior.</li>
+                <li>O persoană trebuie să fie dispusă să dăruiască.</li>
+                <li>O persoană trebuie să-și îngrijească copilul în modalitatea cea mai bună.</li>
+                <li>O persoană trebuie să aibă grijă de cei care au îngrijit-o pe ea.</li>
+            </ol>
+
+            <p>Deși unele reguli par evidente, pentru unele persoane este nevoie de o clarificare. De exemplu, înrobirea unei entități se referă la conceptul de a forța o alta să lucreze împotriva voinței lor pentru o compensație redusă sau inexistentă. Reținerea unei entități este ideea de a o ține împotriva voinței ei.</p>
+
+            <p>În general pedepsirea unei entități pentru acțiunile alteia este incorect, însă atunci când aceasta este pedepsită pentru acțiunile unei entități care se află în grija ei, acest lucru poate fi permis. În acest caz entitatea care se află în grija ei nu poate fi complet responsabilă pentru acțiunile comise datorită lipsei de competență sau rațiune. Entitatea responsabilă nu este pedepsită pentru acțiunile entității în grija ei însă este sancționată pentru neglijență.</p>
+
+            <p>Perfidia nu se referă la cazul în care o entitate este trădată, dar face referință la situația în care o entitate crează o relație cu scopul unic de a trăda sau a păcăli.</p>
+
+            <p>Furatul este mai complicat deoarece poate afecta componente diferite în moduri variate. De exemplu, furând un obiect simplu și înlocuindu-l cu un altul de valoare superioară sau egală este posibil să nu fie considerat furt. Pe de altă parte, furând un lucru și înlocuindu-l cu un altul de valoare egală poate fi considerat furt fiindcă valoarea emoțională nu poate fi înlocuită. Mai mult decât atât furând de la natură nu se referă la furtul unei plante specifice, dar mai degrabă la sustragerea capitalului natural ca o parte de natură. De exemplu, dacă defrișezi o pădure pentru a construi un oraș fără nici o plantă, aceasta ar fi o formă de furt de la natură. Însă în aceeași situație dacă acest oraș este construit cu mulți copaci pe lângă trotuare și cu floră crescănd pe acoperișuri și terase, acest lucru ar putea fi acceptabil. Chiar și așa trebuie luat în considerare dacă speciile native pot supraviețui în aceeași zonă sau alta și dacă aria respectivă este singurul biom existent de acel fel. Mai mult decât atât este interzis furtul artefactelor, companionilor, lucrurilor sau a oricărei entități deoarece chiar dacă acestea sunt entități în nivelurile respective sunt de asemenea proprietatea cuiva sau a unei alte entități.</p>
+
+            <p>Stricarea unei proprietăți se întâmplă adesea și este în general rezultatul vieții de zi cu zi. În acest caz stricarea unei proprietăți se referă la distrugerea, uzura sau demolarea generală a proprietății altcuiva cu scop înadins și răuvoitor. Situații ca acestea pot cauza persoanelor, companionilor sau animalelor transformarea întro bestie. Singurele faune care fac excepție de la această transformare sunt cele pe cale de dispariție. Acest lucru se întâmplă datorită faptului că acestea sunt clasificate ca animale rare și au nevoie să fie îngrijite ca să li se asigure protecția și supraviețuirea.</p>
+
+            <p>În general minciuna este un lucru greșit, dar în cazuri rare în care minciuna este folosită pentru supraviețuirea unei entități de nivel 4 sau superior nu este imorală. Acest lucru este datorită faptului că aceste componente sunt în general foarte valoroase, unice sau de neînlocuit.</p>
+
+            <p>Actul de a dărui nu este numai de natură financiară, dar poate fi îndeplinit și prin donația timpului, dispoziția de a asculta pe cineva sau chiar și prin faptul de a ceda locul într-un autobuz. Deși mulți cred că filantropia începe și se termină cu donația la caritate, acesta nu este cazul. Donația la caritate de către cei foarte norocoși deși este într-un fel un act caritabil, nu este necesar mai caritabil ca donația timpului pe care o persoană mai puțin norocoasă îl oferă unui prieten când stă și ascultă la problemele cu care acesta se zbate.</p>
+
+            <p>Îngrijirea copilului este unul din cele mai importante fapte pe care o persoană le poate îndeplini. Însă este adevărat că unii nu sunt capabili de acest lucru în nici un caz. Datorită acestui lucru avem instituții care încearcă să se ocupe de copii și să le găsească o persoană care să-i îngrijească. Chiar și acțiunea de a aduce copilul la o astfel de instituție poate fi calificată ca o formă de îngrijire precum și acțiunea cuiva de a încerca să fie o persoană stabilă sau virtuoasă pentru a fi o parte pozitivă în viața copilului este și ea o formă de îngrijire.</p>
+
+            <p>Îngrijirea celor care te-au îngrijit este o afirmație generală. Aceasta poate varia de la a-ți găzdui părinții la bătrânețe până la a cumpăra o porție de mâncare unui prieten înfometat când are nevoie. Oamenii își arată grija față de noi în diverse moduri: oferindu-ne prietenia, dragostea sau un umăr pe care să plângem. Această bunătate trebuie răsplătită prin a oferi același lucru înapoi și mai mult decât atât pentru a facilita același tip de grijă în viitor și de a recompensa grija arătată în trecut.</p>
+
+            <p>Această lege morală universală bazată pe virtute este compusă din niveluri ierarhice și o listă de reguli care se aplică la aceste niveluri. Această lege ne permite să ne înțelegem reciproc și să avem o percepție clară a funcționalității regulilor. Scopul nivelurilor ierarhice este de a demonstra o vizualizare clară a ceea ce este cel mai important sau mai puțin important în ansamblu. Deși o persoană poate fi morală urmând aceste reguli și punând în practică aceste virtuți, ea are potențialul de a fi mai virtuoasă prin a încerca să demonstreze alte virtuți pozitive cum ar fi dragostea sau creativitatea.</p>
+
+            <div class="copyright">
+                Artă &amp; Conținut © 2026 Victor Anton Munteanu Ciurușniuc
+            </div>
+        </div>
+
+        <div class="side-column"></div>
+    </div>
+
+</body>
+</html>
